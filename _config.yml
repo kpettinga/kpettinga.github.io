@@ -1,0 +1,66 @@
+# Mandatory settings
+
+name: kirk pettinga
+description: a (mostly) front-end web developer
+paginate: 10
+url: # add your site url (format: http://example.com/)
+blog_theme: light # Or use dark
+
+# Optional settings
+
+about_enabled: true # Change to true if you wish to show an icon in the navigation that redirects to the about page
+discus_identifier: "kirk-pettinga"
+ga_analytics: "UA-23227738-1"
+local_fonts: false # Change to true if you wish to use local fonts
+rss_enabled: false # Change to false if not
+social:
+  dribbble: # Add your Dribbble handle
+  facebook: # Add your Facebook handle
+  flickr: # Add your Flickr handle
+  github: "kpettinga"
+  linkedin: "kirk-pettinga-15794144"
+  twitter: "kirkpettinga"
+  email: "kirk.pettinga@gmail.com"
+  bitcoin: # Add your Bitcoin link or address
+
+# Important settings (change at own risk)
+
+assets:
+  features:
+    automatic_img_size: false
+  sources:
+    - _assets/bower
+    - _assets/fonts
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _vendor/
+    - bower_components
+collections:
+  my_tags:
+    output: true
+    permalink: /tag/:slug/
+defaults:
+  -
+    scope:
+      path: ""
+      type: my_tags
+    values:
+      layout: articles_by_tag
+exclude:
+  - .bowerrc
+  - .travis.yml
+  - bin/*
+  - bower.json
+  - circle.yml
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
+gems:
+  - jekyll-assets
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jemoji
+paginate_path: "/posts/page/:num/"
+permalink: posts/:slug

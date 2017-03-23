@@ -1,0 +1,242 @@
+// =============================================================================
+// Articles
+// =============================================================================
+
+.article {
+  display: block;
+  margin: 100px 0;
+}
+
+.article-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  li {
+    position: relative;
+    display: block;
+    padding: 3rem 0;
+    border-bottom: 1px dashed $base-border-color;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: rem(380);
+
+    @media all and ( min-width: rem(815) ) {
+      border-left: 1px dashed $base-border-color;
+      padding: 5rem 1.5rem;
+    }
+
+    &:first-child {
+      flex-basis: 100%;
+      padding: 5rem 0;
+      border-left: 0;
+    }
+
+    &:nth-child(2n) {
+        border-left: 0;
+        padding-left: 0;
+    }
+  
+    &.article-pagination {
+      display: block;
+      height: 93px;
+      padding: 15px 0 50px;
+      a {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: .1em;
+        color: $gray;
+        text-transform: uppercase;
+        transition: color $base-transition-speed linear;
+        .icon {
+          display: inline-block;
+          margin-top: -2px;
+          font-size: 20px;
+          vertical-align: middle;
+        }
+        &:hover {
+          color: $article-paginator-color-hover;
+        }
+      }
+    }
+
+  }
+
+}
+
+.article-list-item {
+
+  &.get-in-touch {
+    text-align: center;
+  }
+
+  &:first-child {
+    .article-title {
+      @media all and (min-width: rem(815)) {
+        font-size: rem(64);
+      }
+    }
+  }
+
+  .article-title {
+    margin-bottom: 1.5rem;
+    a { color: $brand-primary; }
+    .icon {
+      display: inline-block;
+      margin-top: -2px;
+      vertical-align: middle;
+      opacity: 0;
+      transition: opacity $base-transition-speed linear;
+    }
+    &:hover .icon {
+      opacity: 1;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    color: $article-header-description-color;
+  }
+
+}
+
+.article-list-footer {
+  display: block;
+  span,
+  a {
+    display: inline-block;
+    font-family: $serif;
+    font-size: rem(14);
+    font-weight: 500;
+    color: $article-footer-color;
+    // text-transform: lowercase;
+    vertical-align: middle;
+  }
+  a {
+    margin-right: 7.5px;
+    color: $article-footer-link-color;
+    &:hover {
+      color: $article-footer-link-color-hover;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.article-list-divider {
+  margin: 0 15px;
+}
+
+.article-list-tags {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.article-empty {
+  display: block;
+  margin: 100px 0;
+  color: $gray-light;
+  text-align: center;
+}
+
+// Paginator
+// =============================================================================
+
+.article-pagination-right {
+  float: right;
+}
+
+// Article page
+// =============================================================================
+
+.article-header {
+  display: block;
+  padding-bottom: rem(30);
+  margin-bottom: rem(30);
+  border-bottom: 1px dashed $base-border-color;
+  text-align: center;
+
+  @media all and (min-width: $md) {
+    text-align: left;
+  }
+
+  p {
+    color: $article-header-description-color;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.article-description {
+  text-align: center;
+  @media all and (min-width: $md) {
+    text-align: left;
+  }
+}
+
+.article-content {
+  display: block;
+  margin-top: rem(100);
+
+  h2, h3, h4, h5, h6 {
+    color: $article-post-titles-color;
+  }
+  blockquote p {
+    margin: 0;
+  }
+  img.emoji {
+    display: inline-block;
+    margin-top: -4px;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+}
+
+.article-comments {
+  display: block;
+  padding-top: rem(20);
+  margin-top: rem(100);
+  border-top: 1px solid $base-border-color;
+}
+
+.article-share {
+  display: block;
+  margin-top: rem(30);
+  a {
+    display: inline-block;
+    margin-right: 12px;
+    vertical-align: middle;
+    svg {
+      vertical-align: middle;
+      transition: fill $base-transition-speed linear;
+      fill: $gray-light;
+    }
+    &:hover svg {
+      fill: $gray-dark;
+    }
+  }
+}
+
+// Responsive
+// =============================================================================
+
+@include breakpoint(small) {
+  .article-list-footer {
+    display: block;
+  }
+  .article-list-divider:last-of-type {
+    display: none;
+  }
+  .article-list-tags {
+    display: block;
+    margin-top: -7px;
+  }
+}
