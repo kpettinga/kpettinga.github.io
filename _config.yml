@@ -8,7 +8,7 @@ blog_theme: light # Or use dark
 
 # Optional settings
 
-about_enabled: true # Change to true if you wish to show an icon in the navigation that redirects to the about page
+about_enabled: false # Change to true if you wish to show an icon in the navigation that redirects to the about page
 discus_identifier: "kirk-pettinga"
 ga_analytics: "UA-23227738-1"
 local_fonts: false # Change to true if you wish to use local fonts
@@ -45,7 +45,7 @@ defaults:
     scope:
       path: ""
       type: my_tags
-    values:
+    values: 
       layout: articles_by_tag
 exclude:
   - .bowerrc
