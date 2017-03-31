@@ -1,4 +1,0 @@
----
-slug: gulp
-name: gulp
----
