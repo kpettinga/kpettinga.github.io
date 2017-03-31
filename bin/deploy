@@ -16,7 +16,7 @@ echo "Started deploying"
 git checkout master
 
 # Build site.
-bower install
+# bower install
 bundle exec jekyll build
 
 # Delete and move files.
