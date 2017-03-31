@@ -116,7 +116,7 @@
           <div class="article-description" style="font-size: 125%">Webpack is dominating the build system scene these days, but I'm not ready to give up on Gulp quite yet.</div>
 
           <div class="article-content">
-            <p>Webpack is becoming the obvious solution for bundling assets in the world of code modularity. But Webpack’s documentation isn’t the most user friendly and I still want to use Gulp for the non-javascript parts of my projects (sass, image minification, etc). I also don’t like managing multiple build systems. I just want to install my dependencies, run <strong>one command</strong> and have everything (sass compiling, es6/jsx bundling, and a local server with file watch) up and running.</p>
+            <p>Webpack is becoming the obvious solution for bundling assets in the world of code modularity. But I still find myself not wanting to leave Gulp behind for all my non-javascript related tasks (sass, image minification, etc). I just <em>know</em> Gulp and build system solutions seem to be a dime a dozen these days. Plus, Webpack’s documentation isn’t the most user friendly. Ultimately, I realized that I only want what Webpack does best: bundle my javascript in all its forms. Gulp is capable of this but it’s fairly complicated to setup and Webpack does it out of the box.</p>
 
 <p>So, after a long and winding road, I think I’ve found a decent solution with <code class="highlighter-rouge">webpack-stream</code>. The following code will show you how I configure Webpack to compile React .jsx files using Gulp.</p>
 
@@ -125,7 +125,7 @@
 <div class="highlighter-rouge"><pre class="highlight"><code>my-project/
   build/ 
   src/
-      js/
+    js/
       index.jsx
   gulpfile.js
   index.html
@@ -236,7 +236,7 @@
 </code></pre>
 </div>
 
-<h2 id="step-2-configure-gulp">Step 2: Configure Gulp</h2>
+<h2 id="step-3-configure-gulp">Step 3: Configure Gulp</h2>
 
 <p>Copy/paste the code below into <code class="highlighter-rouge">gulpfile.js</code> in the root of your project:</p>
 
