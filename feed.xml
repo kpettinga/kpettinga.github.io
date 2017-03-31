@@ -7,17 +7,17 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Welcome...</title>
-        <description>to my new blog! Here I'll be sharing ideas, code, and general ramblings about the jungle that is front-end web development.</description>
-        <pubDate>Wed, 22 Mar 2017 00:00:00 +0700</pubDate>
-        <link>/posts/welcome</link>
-        <guid isPermaLink="true">/posts/welcome</guid>
+        <title>React with Gulp and Webpack, a solution that works.</title>
+        <description>Webpack is dominating the build system scene these days, but I'm not ready to give up on Gulp quite yet.</description>
+        <pubDate>Fri, 31 Mar 2017 00:00:00 +0800</pubDate>
+        <link>/posts/react-with-gulp-and-webpack</link>
+        <guid isPermaLink="true">/posts/react-with-gulp-and-webpack</guid>
       </item>
     
       <item>
         <title>Chalk sample post with all elements</title>
         <description>Have a look at all the predesigned elements you can use in Chalk.</description>
-        <pubDate>Sat, 15 Oct 2016 00:00:00 +0700</pubDate>
+        <pubDate>Sat, 15 Oct 2016 00:00:00 +0800</pubDate>
         <link>/posts/chalk-sample-post-with-all-elements</link>
         <guid isPermaLink="true">/posts/chalk-sample-post-with-all-elements</guid>
       </item>
