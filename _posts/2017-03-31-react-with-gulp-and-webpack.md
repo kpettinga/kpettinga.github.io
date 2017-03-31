@@ -6,7 +6,7 @@ status: publish
 tags: [gulp, webpack, javascript, es6, react]
 ---
 
-Webpack is becoming the obvious solution for bundling assets in the world of code modularity. But Webpack's documentation isn't the most user friendly and I still want to use Gulp for the non-javascript parts of my projects (sass, image minification, etc). I also don't like managing multiple build systems. I just want to install my dependencies, run **one command** and have everything (sass compiling, es6/jsx bundling, and a local server with file watch) up and running.
+Webpack is becoming the obvious solution for bundling assets in the world of code modularity. But I still find myself not wanting to leave Gulp behind for all my non-javascript related tasks (sass, image minification, etc). I just _know_ Gulp and build system solutions seem to be a dime a dozen these days. Plus, Webpack's documentation isn't the most user friendly. Ultimately, I realized that I only want what Webpack does best: bundle my javascript in all its forms. Gulp is capable of this but it's fairly complicated to setup and Webpack does it out of the box. 
 
 So, after a long and winding road, I think I've found a decent solution with `webpack-stream`. The following code will show you how I configure Webpack to compile React .jsx files using Gulp. 
 
@@ -16,7 +16,7 @@ Before we get started, this is the assumed directory structure of our project:
 my-project/
   build/ 
   src/
-      js/
+    js/
       index.jsx
   gulpfile.js
   index.html
@@ -116,7 +116,7 @@ module.exports = {
 };
 ```
 
-## Step 2: Configure Gulp
+## Step 3: Configure Gulp
 
 Copy/paste the code below into `gulpfile.js` in the root of your project:
 

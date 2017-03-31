@@ -76,7 +76,6 @@
   &:first-child {
     .article-title {
       @media all and (min-width: rem(815)) {
-        font-size: rem(64);
         max-width: 75%;
       }
     }
