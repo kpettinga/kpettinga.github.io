@@ -1,0 +1,42 @@
+// =============================================================================
+// Variables
+// =============================================================================
+
+// Typography
+// =============================================================================
+
+$sans-serif: "sofia-pro", Helvetica, Arial, sans-serif;
+$serif: "freight-text-pro", "Georgia", serif;
+$base-font-family: $serif;
+$base-font-weight: 400;
+$base-font-weight-bold: 700;
+
+// Sizes
+// =============================================================================
+
+// Grid
+
+$columns: 12;
+$max-width: rem(800);
+$gutter: rem(20);
+$one-column: 100% / $columns;
+$negative-gutter: 0 - $gutter;
+
+$md: 768px;
+$lg: 1200px;
+$xl: 1500px;
+$xxl: 1800px;
+
+// Font sizes
+
+$base-font-size: 1.2rem;
+$base-line-height: 1.6;
+
+// Box sizes
+
+$base-border-radius: 4px;
+
+// Effects
+// =============================================================================
+
+$base-transition-speed: 250ms;
