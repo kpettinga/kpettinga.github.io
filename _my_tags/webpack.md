@@ -1,4 +1,0 @@
----
-slug: webpack
-name: webpack
----
