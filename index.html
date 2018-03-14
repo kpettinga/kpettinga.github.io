@@ -9,18 +9,20 @@
 
 	<meta property="og:title" content="Kirk Pettinga">
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="http://kirkpettinga.com/">
+	<meta property="og:url" content="http://www.kirkpettinga.com/">
 	<meta property="og:description" content="Front End Developer - I build web interfaces.">
 	<meta property="og:site_name" content="kirk pettinga">
-	<meta property="og:image" content="http://kirkpettinga.com/og-image.jpg">
+	<meta property="og:image" content="http://www.kirkpettinga.com/og-image.jpg">
 
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:url" content="http://kirkpettinga.com/">
+	<meta name="twitter:url" content="http://www.kirkpettinga.com/">
 	<meta name="twitter:title" content="Kirk Pettinga">
 	<meta name="twitter:description" content="Front End Developer - I build web interfaces.">
-	<meta name="twitter:image" content="http://kirkpettinga.com/og-image.jpg">
+	<meta name="twitter:image" content="http://www.kirkpettinga.com/og-image.jpg">
 
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+	<link rel="stylesheet" href="/normalize.css" />
 
 	<script src="https://use.typekit.net/wrw0mnw.js"></script>
 	<script>
@@ -350,16 +352,8 @@
 
 	<section id="content"></section>
 
-	<script type="text/html" id="template">
-		<div id="item-{{i}}" class="item">
-			<input type="checkbox" id="checkbox-{{i}}" name="checkbox_{{i}}" />
-			<label for="checkbox-{{i}}" class="checkbox-label is-{{color}}"></label>
-		</div>
-	</script>
-
 	<script type="text/javascript">
-		var template = document.getElementById('template').innerHTML,
-			content = document.getElementById('content'),
+		var content = document.getElementById('content'),
 			count = 100,
 			colors = ['blue', 'red'],
 			els = [];
@@ -367,10 +361,12 @@
 		for (var i = 0; i < count; i++) {
 			var el = document.createElement('div'),
 				color = colors[Math.floor(Math.random() * 2)];
-			el.innerHTML = Mustache.render(template, {
-				i: i,
-				color: color
-			});
+
+			el.innerHTML = '<div id="item-'+i+'" class="item">' +
+								'<input type="checkbox" id="checkbox-'+i+'" name="checkbox_'+i+'" />' +
+								'<label for="checkbox-'+i+'" class="checkbox-label is-'+color+'"></label>' +
+							'</div>';
+
 			content.appendChild(el);
 			els.push(el);
 		}
@@ -396,16 +392,15 @@
 		loop();
 	</script>
 
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23227738-1"></script>
 	<script>
-		window.ga = function () {
-			ga.q.push(arguments)
-		};
-		ga.q = [];
-		ga.l = +new Date;
-		ga('create', 'UA-23227738-1', 'auto');
-		ga('send', 'pageview')
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-23227738-1');
 	</script>
-	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
 </body>
 
