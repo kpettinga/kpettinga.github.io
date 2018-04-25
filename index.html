@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>kirk pettinga</title>
+	<title>Kirk Pettinga | Web Developer</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<meta property="og:title" content="Kirk Pettinga">
@@ -20,9 +20,10 @@
 	<meta name="twitter:description" content="Front End Developer - I build web interfaces.">
 	<meta name="twitter:image" content="http://www.kirkpettinga.com/og-image.jpg">
 
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="apple-touch-icon" href="./apple-touch-icon.png">
 
-	<link rel="stylesheet" href="/normalize.css" />
+	<link rel="stylesheet" href="./assets/css/style.css" />
+	<!-- <link rel="stylesheet" href="./assets/css/style.min.css" /> -->
 
 	<script src="https://use.typekit.net/wrw0mnw.js"></script>
 	<script>
@@ -33,374 +34,120 @@
 		} catch (e) {}
 	</script>
 
-	<style>
-		@-webkit-keyframes shift {
-			0% {
-				-webkit-transform: translate3d(0%, 0, 0);
-				transform: translate3d(0%, 0, 0);
-			}
-			50% {
-				-webkit-transform: translate3d(30%, 0, 0);
-				transform: translate3d(30%, 0, 0);
-			}
-			100% {
-				-webkit-transform: translate3d(0%, 0, 0);
-				transform: translate3d(0%, 0, 0);
-			}
-		}
-
-		@keyframes shift {
-			0% {
-				-webkit-transform: translate3d(0%, 0, 0);
-				transform: translate3d(0%, 0, 0);
-			}
-			50% {
-				-webkit-transform: translate3d(30%, 0, 0);
-				transform: translate3d(30%, 0, 0);
-			}
-			100% {
-				-webkit-transform: translate3d(0%, 0, 0);
-				transform: translate3d(0%, 0, 0);
-			}
-		}
-
-		@-webkit-keyframes flare-blue {
-			0% {
-				-webkit-box-shadow: 0 0 0 rgba(0, 129, 228, 0.5);
-				box-shadow: 0 0 0 rgba(0, 129, 228, 0.5);
-			}
-			100% {
-				-webkit-box-shadow: 0 0 0 20px rgba(0, 129, 228, 0.01);
-				box-shadow: 0 0 0 20px rgba(0, 129, 228, 0.01);
-			}
-		}
-
-		@keyframes flare-blue {
-			0% {
-				-webkit-box-shadow: 0 0 0 rgba(0, 129, 228, 0.5);
-				box-shadow: 0 0 0 rgba(0, 129, 228, 0.5);
-			}
-			100% {
-				-webkit-box-shadow: 0 0 0 20px rgba(0, 129, 228, 0.01);
-				box-shadow: 0 0 0 20px rgba(0, 129, 228, 0.01);
-			}
-		}
-
-		@-webkit-keyframes flare-red {
-			0% {
-				-webkit-box-shadow: 0 0 0 rgba(244, 66, 95, 0.5);
-				box-shadow: 0 0 0 rgba(244, 66, 95, 0.5);
-			}
-			100% {
-				-webkit-box-shadow: 0 0 0 20px rgba(244, 66, 95, 0.01);
-				box-shadow: 0 0 0 20px rgba(244, 66, 95, 0.01);
-			}
-		}
-
-		@keyframes flare-red {
-			0% {
-				-webkit-box-shadow: 0 0 0 rgba(244, 66, 95, 0.5);
-				box-shadow: 0 0 0 rgba(244, 66, 95, 0.5);
-			}
-			100% {
-				-webkit-box-shadow: 0 0 0 20px rgba(244, 66, 95, 0.01);
-				box-shadow: 0 0 0 20px rgba(244, 66, 95, 0.01);
-			}
-		}
-
-		html {
-			font-size: 100%;
-		}
-
-		body {
-			font-family: "freight-text-pro", serif;
-		}
-
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			margin: 1rem 0 0;
-			line-height: 1;
-			font-family: "sofia-pro", arial, sans-serif;
-		}
-
-		h2 {
-			font-size: 1rem;
-		}
-
-		p {
-			margin: 1rem 0 0;
-			line-height: 1;
-			font-size: 1rem;
-		}
-
-		a {
-			text-decoration: none;
-			color: inherit;
-			position: relative;
-		}
-
-		a:before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: -10px;
-			bottom: 0;
-			right: calc( 100% + 10px);
-			background: rgba(0, 129, 228, 0.1);
-			-webkit-transition: all 200ms cubic-bezier(0.86, 0, 0.07, 1);
-			transition: all 200ms cubic-bezier(0.86, 0, 0.07, 1);
-		}
-
-		a:hover:before,
-		a:focus:before {
-			right: -10px;
-		}
-
-		hr {
-			display: block;
-			width: 100%;
-			max-width: 50px;
-			border: 0;
-			margin: 2rem 0;
-			height: 5px;
-			background: black;
-		}
-
-		hr.pull-out {
-			margin-left: -20px;
-		}
-
-		@media only screen and (min-width: 640px) {
-			hr.pull-out {
-				margin-left: 0;
-			}
-		}
-
-		hr.short {
-			max-width: 5px;
-		}
-
-		.font-display {
-			font-family: "sofia-pro", arial, sans-serif;
-		}
-
-		.weight-bold {
-			font-weight: 600;
-		}
-
-		input[type="checkbox"] {
-			display: none;
-		}
-
-		.checkbox-label {
-			cursor: pointer;
-			position: relative;
-			display: block;
-			width: 44px;
-			height: 24px;
-		}
-
-		.checkbox-label:before,
-		.checkbox-label:after {
-			content: "";
-			position: absolute;
-			-webkit-transition: all 200ms cubic-bezier(0.86, 0, 0.07, 1);
-			transition: all 200ms cubic-bezier(0.86, 0, 0.07, 1);
-		}
-
-		.checkbox-label:before {
-			top: 0;
-			left: 0;
-			background: #ddd;
-			width: 44px;
-			height: 24px;
-			border-radius: 12px;
-		}
-
-		[type="checkbox"]:checked+.checkbox-label {
-			-webkit-animation: shift 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-			animation: shift 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-		}
-
-		[type="checkbox"]:checked+.checkbox-label.is-blue:before {
-			background: #0081e4;
-			-webkit-animation: flare-blue 1.5s;
-			animation: flare-blue 1.5s;
-		}
-
-		[type="checkbox"]:checked+.checkbox-label.is-red:before {
-			background: #f4425f;
-			-webkit-animation: flare-red 1.5s;
-			animation: flare-red 1.5s;
-		}
-
-		.checkbox-label:after {
-			background: rgba(255, 255, 255, 0.5);
-			top: 2px;
-			left: 2px;
-			width: 20px;
-			height: 20px;
-			border-radius: 50%;
-		}
-
-		[type="checkbox"]:checked+.checkbox-label:after {
-			-webkit-transform: translate3d(100%, 0, 0);
-			transform: translate3d(100%, 0, 0);
-			background: white;
-		}
-
-		section {
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-ms-flex-wrap: wrap;
-			flex-wrap: wrap;
-			-webkit-box-pack: justify;
-			-ms-flex-pack: justify;
-			justify-content: space-between;
-			padding: 0 10px;
-			margin: 0 auto;
-			max-width: 640px;
-		}
-
-		.item {
-			margin: 10px;
-		}
-
-		header {
-			margin: 3rem auto 0;
-			padding: 0 20px;
-			max-width: 620px;
-		}
-
-		.row {
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-ms-flex-wrap: wrap;
-			flex-wrap: wrap;
-		}
-
-		.row.align-bottom {
-			-webkit-box-align: end;
-			-ms-flex-align: end;
-			align-items: flex-end;
-		}
-
-		.w-50 {
-			-ms-flex-preferred-size: 100%;
-			flex-basis: 100%;
-			-ms-flex-negative: 0;
-			flex-shrink: 0;
-		}
-
-		@media only screen and (min-width: 640px) {
-			.w-50 {
-				-ms-flex-preferred-size: 50%;
-				flex-basis: 50%;
-				-webkit-box-flex: 0;
-				-ms-flex-positive: 0;
-				flex-grow: 0;
-			}
-		}
-	</style>
-
 </head>
 
-<body>
+<body data-project="0">
 
-	<header>
-		<div class="row align-bottom">
-			<div class="w-50">
-				<h1>kirk pettinga</h1>
+	<canvas id="canvas"></canvas>
+
+	<main>
+
+		<section id="intro" class="section"> </section>
+		
+		<section id="project-1" class="section">
+			<div class="section-media">
+				<img src="./assets/images/500.jpg" class="animate on-active fade-in from-right" />
+				<div class="flex my-1">
+					<div class="half">
+						<img src="./assets/images/giphy-1.gif" width="400" height="300" class="animate on-active fade-in from-left delay-200" />
+					</div>
+					<div class="half">
+						<img src="./assets/images/300.jpg" width="400" height="300" class="animate on-active fade-in from-right delay-400" />
+					</div>
+				</div>
+				<img src="./assets/images/500.jpg" class="animate on-active fade-in from-left delay-600" />
 			</div>
-			<div class="w-50">
-				<p>
-					<em>Front End Developer</em>
-				</p>
+			<p class="h4 mt-6 text-center"><a href="#project-2">Next</a></p>
+		</section> 
+		
+		<section id="project-2" class="section">
+			<div class="section-media">
+				<img src="./assets/images/500.jpg" class="animate on-active fade-in from-right" />
+				<div class="flex my-1">
+					<div class="half">
+						<img src="./assets/images/giphy.gif" width="400" height="300" class="animate on-active fade-in from-left delay-200" />
+					</div>
+					<div class="half">
+						<img src="./assets/images/300.jpg" width="400" height="300" class="animate on-active fade-in from-right delay-400" />
+					</div>
+				</div>
+				<img src="./assets/images/500.jpg" class="animate on-active fade-in from-left delay-600" />
+			</div>
+			<p class="h4 mt-6 text-center"><a href="#outro">Like what you've seen?</a></p>
+		</section>
+
+		<section id="outro" class="section">
+			<div class="section-media flex center-y">
+				<form action="https://formsapi.jabwn.com/key/3hE5XKZew983fXwfMGvB" method="POST">
+					<div class="flex">
+						<div class="field half">
+							<input type="text" placeholder="Name" name="name" id="name"/>
+							<label for="name"><span style="display:none">Name</span></label>
+						</div>
+						<div class="field half">
+							<input type="email" placeholder="Email" name="email" id="email" validate/>
+							<label for="email"><span style="display:none">Email</span></label>
+						</div>
+					</div>
+					<div class="field">
+						<textarea rows="6" cols="8" placeholder="Message" name="message" id="message"></textarea>
+						<label for="message"><span style="display:none">Message</span></label>
+					</div>
+					<input type="text" name="_honey" value="" style="display:none">
+					<input type="hidden" name="_replyto" value="%email"/>
+					<input type="hidden" name="_subject" value="New submission from kirkpettinga.com"/>
+					<input type="hidden" name="_confirmation" value="Thanks for reaching out! I look forward to speaking with you. —Kirk">
+					<button type="submit" class="success"><i class="icon icon-send" aria-hidden="true"></i><span class="text">&nbsp;Hit me!</span></button>
+				</form>
+			</div>
+		</section>
+
+	</main>
+
+	<div class="mask">
+		<div class="top">
+			<div class="avatar animate on-init fade-in from-left">
+				<img src="./assets/images/avatar.png" width="66" height="66" alt="avatar" />
+			</div>
+
+			<p class="brand mt-0 animate on-init fade-in from-right">
+				<span class="h4">Kirk Pettinga</span>
+				<br/>
+				<em class="faded">Web Developer</em>
+			</p>
+			
+			<a href="#outro" class="cta-chat button">
+				<i class="icon icon-chat" aria-hidden="true"></i>
+				<span class="text">&nbsp; Let's Chat</span>
+			</a>
+		
+		</div>
+		<div class="center">
+			<div id="headline" class="headline animate on-init fade-in from-left">
+				<div id="headline-track" class="animate">
+					<!-- populated by JS -->
+				</div>
 			</div>
 		</div>
-
-		<div class="row" style="margin-bottom:3rem">
-			<div class="w-50">
-				<hr class="pull-out" />
-				<h2>
-					<span>I build web interfaces</span>
-				</h2>
-			</div>
-			<div class="w-50">
-				<hr class="short" />
-				<p>
-					<a href="https://github.com/kpettinga">
-						<span class="font-display weight-bold" style="display:inline-block;width:68px">github </span>
-						<em>kpettinga</em>
-					</a>
-				</p>
-				<p style="margin-top:0.5em">
-					<a href="mailto:kirk.pettinga@email.com">
-						<span class="font-display weight-bold" style="display:inline-block;width:68px">@ </span>
-						<em>kirk.pettinga@email.com</em>
-					</a>
-				</p>
-			</div>
+		<div class="bottom text-center">
+			<a href="#project-1" class="h4 cta-work animate">Let's see the goods</a>
 		</div>
-	</header>
+	</div>
 
-	<section id="content"></section>
-
-	<script type="text/javascript">
-		var content = document.getElementById('content'),
-			count = 100,
-			colors = ['blue', 'red'],
-			els = [];
-
-		for (var i = 0; i < count; i++) {
-			var el = document.createElement('div'),
-				color = colors[Math.floor(Math.random() * 2)];
-
-			el.innerHTML = '<div id="item-'+i+'" class="item">' +
-								'<input type="checkbox" id="checkbox-'+i+'" name="checkbox_'+i+'" />' +
-								'<label for="checkbox-'+i+'" class="checkbox-label is-'+color+'"></label>' +
-							'</div>';
-
-			content.appendChild(el);
-			els.push(el);
-		}
-
-		function loop() {
-
-			var x = Math.floor(Math.random() * count),
-				target = els[x],
-				targetInput = target.querySelector('input');
-
-			if (targetInput.checked) {
-				targetInput.checked = false;
-			} else {
-				targetInput.checked = true;
-			}
-
-			setTimeout(function () {
-				loop();
-			}, 100);
-
-		}
-
-		loop();
-	</script>
+	<script src="./assets/scripts/easeljs-0.8.2.min.js"></script>
+	<script src="./assets/scripts/tweenjs-0.6.2.min.js"></script>
+	<script src="./assets/scripts/main.js"></script>
+	<!-- <script src="./assets/scripts/main.min.js"></script> -->
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23227738-1"></script>
+	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23227738-1"></script>
 	<script>
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
 
 	gtag('config', 'UA-23227738-1');
-	</script>
+	</script> -->
 
 </body>
 
