@@ -38,100 +38,205 @@
 
 <body data-project="0">
 
-	<canvas id="canvas"></canvas>
+	<div id="page">
 
-	<main>
+		<canvas id="canvas"></canvas>
 
-		<section id="intro" class="section"> </section>
-		
-		<section id="project-1" class="section">
-			<div class="section-media">
-				<img src="./assets/images/500.jpg" class="animate on-active fade-in from-right" />
-				<div class="flex my-1">
-					<div class="half">
-						<img src="./assets/images/giphy-1.gif" width="400" height="300" class="animate on-active fade-in from-left delay-200" />
-					</div>
-					<div class="half">
-						<img src="./assets/images/300.jpg" width="400" height="300" class="animate on-active fade-in from-right delay-400" />
-					</div>
+		<main>
+
+			<section id="intro" class="intro section">
+				<div class="section-media">
+					<p class="h4 pb-6 text-center"><a href="#project-1">Show me the goods</a></p>
 				</div>
-				<img src="./assets/images/500.jpg" class="animate on-active fade-in from-left delay-600" />
-			</div>
-			<p class="h4 mt-6 text-center"><a href="#project-2">Next</a></p>
-		</section> 
-		
-		<section id="project-2" class="section">
-			<div class="section-media">
-				<img src="./assets/images/500.jpg" class="animate on-active fade-in from-right" />
-				<div class="flex my-1">
-					<div class="half">
-						<img src="./assets/images/giphy.gif" width="400" height="300" class="animate on-active fade-in from-left delay-200" />
-					</div>
-					<div class="half">
-						<img src="./assets/images/300.jpg" width="400" height="300" class="animate on-active fade-in from-right delay-400" />
-					</div>
-				</div>
-				<img src="./assets/images/500.jpg" class="animate on-active fade-in from-left delay-600" />
-			</div>
-			<p class="h4 mt-6 text-center"><a href="#outro">Like what you've seen?</a></p>
-		</section>
-
-		<section id="outro" class="section">
-			<div class="section-media flex center-y">
-				<form action="https://formsapi.jabwn.com/key/3hE5XKZew983fXwfMGvB" method="POST">
-					<div class="flex">
-						<div class="field half">
-							<input type="text" placeholder="Name" name="name" id="name"/>
-							<label for="name"><span style="display:none">Name</span></label>
-						</div>
-						<div class="field half">
-							<input type="email" placeholder="Email" name="email" id="email" validate/>
-							<label for="email"><span style="display:none">Email</span></label>
-						</div>
-					</div>
-					<div class="field">
-						<textarea rows="6" cols="8" placeholder="Message" name="message" id="message"></textarea>
-						<label for="message"><span style="display:none">Message</span></label>
-					</div>
-					<input type="text" name="_honey" value="" style="display:none">
-					<input type="hidden" name="_replyto" value="%email"/>
-					<input type="hidden" name="_subject" value="New submission from kirkpettinga.com"/>
-					<input type="hidden" name="_confirmation" value="Thanks for reaching out! I look forward to speaking with you. —Kirk">
-					<button type="submit" class="success"><i class="icon icon-send" aria-hidden="true"></i><span class="text">&nbsp;Hit me!</span></button>
-				</form>
-			</div>
-		</section>
-
-	</main>
-
-	<div class="mask">
-		<div class="top">
-			<div class="avatar animate on-init fade-in from-left">
-				<img src="./assets/images/avatar.png" width="66" height="66" alt="avatar" />
-			</div>
-
-			<p class="brand mt-0 animate on-init fade-in from-right">
-				<span class="h4">Kirk Pettinga</span>
-				<br/>
-				<em class="faded">Web Developer</em>
-			</p>
+			</section>
 			
-			<a href="#outro" class="cta-chat button">
-				<i class="icon icon-chat" aria-hidden="true"></i>
-				<span class="text">&nbsp; Let's Chat</span>
-			</a>
-		
-		</div>
-		<div class="center">
-			<div id="headline" class="headline animate on-init fade-in from-left">
-				<div id="headline-track" class="animate">
-					<!-- populated by JS -->
+			<section id="project-1" class="project-1 section">
+				<div class="section-media">
+					
+					<div class="section-video flex center-x center-y">
+						<video autoplay loop muted preload="preload" width="1584" height="898" class="animate on-active fade-in from-right">
+							<source src="./assets/video/hester-project-scroll.webm" type="video/webm" />
+							<source src="./assets/video/hester-project-scroll.mp4" type="video/mp4" />
+						</video>
+					</div>
+				
+					<div class="section-text animate on-active fade-in from-left">
+						<div class="left">
+							<p class="mt-0">Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat. Donec sollicitudin molestie malesuada. </p>
+							<p class="h4 pb-6"><a href="#project-2">Next</a></p>
+						</div>
+						<div class="right">
+							<p class="mt-0"><em>
+								Role: Primary Developer<br/>
+								Platform: Wordpress
+							</em></p>
+						</div>
+					</div>
+				
+				</div>
+			</section>
+			
+			<section id="project-2" class="project-2 section">
+				<div class="section-media">
+					
+					<div class="section-video flex center-x center-y">
+						<video autoplay loop muted preload="preload" width="1424" height="956" class="animate on-active fade-in from-right">
+							<source src="./assets/video/gibney-flow.webm" type="video/webm" />
+							<source src="./assets/video/gibney-flow.mp4" type="video/mp4" />
+						</video>
+					</div>
+					
+					<div class="section-text animate on-active fade-in from-left">
+						<div class="left">
+							<p class="mt-0">Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat. Donec sollicitudin molestie malesuada. </p>
+							<p class="h4 pb-6"><a href="#project-3">Next</a></p>
+						</div>
+						<div class="right">
+							<p class="mt-0"><em>
+								Role: Primary Developer<br/>
+								Platform: Wordpress
+							</em></p>
+						</div>
+					</div>
+					
+				</div>
+			</section>
+
+			<section id="project-3" class="project-3 section">
+				<div class="section-media">
+					
+					<div class="section-video flex center-x center-y">
+						<video autoplay loop muted preload="preload" width="1422" height="810" class="animate on-active fade-in from-right">
+							<source src="./assets/video/transit-center-flow.webm" type="video/webm" />
+							<source src="./assets/video/transit-center-flow.mp4" type="video/mp4" />
+						</video>
+					</div>
+					
+					<div class="section-text animate on-active fade-in from-left">
+						<div class="left">
+							<p class="mt-0">Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat. Donec sollicitudin molestie malesuada. </p>
+							<p class="h4 pb-6"><a href="#project-4">Next</a></p>
+						</div>
+						<div class="right">
+							<p class="mt-0"><em>
+								Role: Primary Developer<br/>
+								Platform: Wordpress
+							</em></p>
+						</div>
+					</div>
+					
+				</div>
+			</section>
+
+			<section id="project-4" class="project-1 section">
+				<div class="section-media">
+
+					<div class="section-video flex center-x center-y">
+						<video autoplay loop muted preload="preload" width="1678" height="942" class="animate on-active fade-in from-right">
+							<source src="./assets/video/orpheus-flow-1.webm" type="video/webm" />
+							<source src="./assets/video/orpheus-flow-1.mp4" type="video/mp4" />
+						</video>
+					</div>
+
+					<div class="section-text animate on-active fade-in from-left">
+						<div class="left">
+							<p class="mt-0">Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat. Donec sollicitudin molestie malesuada. </p>
+							<p class="h4 pb-6"><a href="#project-5">Next</a></p>
+						</div>
+						<div class="right">
+							<p class="mt-0"><em>
+								Role: Primary Developer<br/>
+								Platform: Wordpress
+							</em></p>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			
+			<section id="project-5" class="project-5 section">
+				<div class="section-media">
+					
+					<div class="section-video flex center-x center-y">
+						<video autoplay loop muted preload="preload" width="1424" height="956" class="animate on-active fade-in from-right">
+							<source src="./assets/video/cgu-flow.webm" type="video/webm" />
+							<source src="./assets/video/cgu-flow.mp4" type="video/mp4" />
+						</video>
+					</div>
+					
+					<div class="section-text animate on-active fade-in from-left">
+						<div class="left">
+							<p class="mt-0">Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat. Donec sollicitudin molestie malesuada. </p>
+							<p class="h4 pb-6"><a href="#lets-chat">Like what you've seen?</a></p>
+						</div>
+						<div class="right">
+							<p class="mt-0"><em>
+								Role: Primary Developer<br/>
+								Platform: Wordpress
+							</em></p>
+						</div>
+					</div>
+					
+				</div>
+			</section>
+
+			<section id="lets-chat" class="lets-chat section">
+				<div class="section-media flex center-y center-x">
+					<form action="https://formsapi.jabwn.com/key/3hE5XKZew983fXwfMGvB" method="POST">
+						<div class="row">
+							<div class="field half">
+								<input type="text" placeholder="Name" name="name" id="name"/>
+								<label for="name"><span style="display:none">Name</span></label>
+							</div>
+							<div class="field half">
+								<input type="email" placeholder="Email" name="email" id="email" validate/>
+								<label for="email"><span style="display:none">Email</span></label>
+							</div>
+						</div>
+						<div class="field">
+							<textarea rows="6" cols="8" placeholder="Message" name="message" id="message"></textarea>
+							<label for="message"><span style="display:none">Message</span></label>
+						</div>
+						<input type="text" name="_honey" value="" style="display:none">
+						<input type="hidden" name="_replyto" value="%email"/>
+						<input type="hidden" name="_subject" value="New submission from kirkpettinga.com"/>
+						<input type="hidden" name="_confirmation" value="Thanks for reaching out! I look forward to speaking with you. —Kirk">
+						<button type="submit" class="success"><i class="icon icon-send" aria-hidden="true"></i><span class="text">&nbsp;Hit me!</span></button>
+					</form>
+				</div>
+			</section>
+
+		</main>
+
+		<div class="mask">
+			<div class="top">
+
+				<div class="avatar animate on-init fade-in from-left">
+					<img src="./assets/images/avatar.png" width="66" height="66" alt="avatar" />
+				</div>
+
+				<a href="#intro" class="brand mt-0 animate on-init fade-in from-right">
+					<span class="h4">Kirk Pettinga</span>
+					<br/>
+					<em class="faded">Web Developer</em>
+				</a>
+			
+			</div>
+			<div class="center">
+				<div id="headline" class="headline animate on-init fade-in from-left">
+					<div id="headline-track" class="animate">
+						<!-- populated by JS -->
+					</div>
 				</div>
 			</div>
+			<div class="bottom">
+				<a href="#lets-chat" class="cta-chat button">
+					<i class="icon icon-chat" aria-hidden="true"></i>
+					<span class="text">&nbsp; Let's Chat</span>
+				</a>
+			</div>
 		</div>
-		<div class="bottom text-center">
-			<a href="#project-1" class="h4 cta-work animate">Let's see the goods</a>
-		</div>
+
 	</div>
 
 	<script src="./assets/scripts/easeljs-0.8.2.min.js"></script>

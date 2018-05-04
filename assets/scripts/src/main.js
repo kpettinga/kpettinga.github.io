@@ -4,37 +4,36 @@
 	// Setup canvas area
 	// ----------------------------------------------------------
 
-	var winW = window.innerWidth - 15,
-		winH = window.innerHeight,
-		stage = new createjs.Stage('canvas');
+	// var winW = window.innerWidth - 15,
+	// 	winH = window.innerHeight,
+	// 	stage = new createjs.Stage('canvas');
 
-	stage.canvas.width = winW;
-	stage.canvas.height = winH;
-	stage.regX = winW / -2;
-	stage.regY = winH / -2;
-
+	// stage.canvas.width = winW;
+	// stage.canvas.height = winH;
+	// stage.regX = winW / -2;
+	// stage.regY = winH / -2;
 
 	// Setup content for each section
 	// ----------------------------------------------------------
 
 	APP.projects.forEach(function (project, i) {
 
-		var width = stage.canvas.width,
-			height = stage.canvas.height;
+		// var width = stage.canvas.width,
+		// 	height = stage.canvas.height;
 
-		// build canvas shapes
+		// // build canvas shapes
 		
-		project.shape = new createjs.Shape();
-		if (i === 0) {
-			project.shape.regX = 25;
-			project.shape.regY = 2;
-			project.shape.graphics.beginFill(project.fill).drawRect(0, 0, 50, 4);
-		} else {
-			project.shape.regX = width / 2;
-			project.shape.regY = height / 2;
-			project.shape.graphics.beginFill(project.fill).drawRect(0, height * i, width, height);
-		}
-		stage.addChild(project.shape);
+		// project.shape = new createjs.Shape();
+		// if (i === 0) {
+		// 	project.shape.regX = 25;
+		// 	project.shape.regY = 2;
+		// 	project.shape.graphics.beginFill(project.fill).drawRect(0, 0, 50, 4);
+		// } else {
+		// 	project.shape.regX = width / 2;
+		// 	project.shape.regY = height / 2;
+		// 	project.shape.graphics.beginFill(project.fill).drawRect(0, height * i, width, height);
+		// }
+		// stage.addChild(project.shape);
 
 		// populate headlines
 
@@ -52,16 +51,18 @@
 	// Intro animation
 	// ----------------------------------------------------------
 
-	createjs.Tween.get(APP.projects[0].shape)
-		.to({ rotation: 1080 }, 3000, createjs.Ease.getPowOut(4))
-		.to({ scaleX: stage.canvas.width / 50 }, 600, createjs.Ease.getPowOut(4))
-		.call(function () {
-			document.body.classList.add('initialized');
-		})
-		.to({ scaleY: stage.canvas.height / 4 }, 700, createjs.Ease.getPowOut(4));
+	// createjs.Tween.get(APP.projects[0].shape)
+	// 	.to({ rotation: 1080 }, 3000, createjs.Ease.getPowOut(4))
+	// 	.to({ scaleX: stage.canvas.width / 50 }, 600, createjs.Ease.getPowOut(4))
+	// 	.call(function () {
+	// 		document.body.classList.add('initialized');
+	// 	})
+	// 	.to({ scaleY: stage.canvas.height / 4 }, 700, createjs.Ease.getPowOut(4));
 
-	createjs.Ticker.setFPS(60);
-	createjs.Ticker.addEventListener("tick", stage);
+	// createjs.Ticker.setFPS(60);
+	// createjs.Ticker.addEventListener("tick", stage);
+
+	document.body.classList.add('initialized');
 
 
 	// Scroll behavior between sections
@@ -69,12 +70,16 @@
 
 	var sections = document.querySelectorAll('.section');
 
-	sections.forEach(function (section, i) {	
+	sections.forEach(function (section, i) {
+
+		var project = APP.projects[i],
+			color = project.color ? project.color : '#222',
+			fill = project.fill ? project.fill : '#f3f5f7';
 
 		APP.onScroll.push(function (scrollTop) {
-			var height = stage.canvas.height,
-				top = section.offsetTop - height / 2;
-				bottom = (section.offsetHeight + section.offsetTop) - height / 2;
+			var top = section.offsetTop - window.innerHeight / 2,
+				//height = stage.canvas.height,
+				bottom = (section.offsetHeight + section.offsetTop) - window.innerHeight / 2;
 
 			if (scrollTop >= top && scrollTop < bottom) {
 
@@ -82,14 +87,15 @@
 				
 					section.classList.add('active');
 
-					createjs.Tween.get(stage)
-						.to({
-							y: -height * i
-						}, 1000, createjs.Ease.getPowOut(4));
+					// createjs.Tween.get(stage)
+					// 	.to({
+					// 		y: -height * i
+					// 	}, 1000, createjs.Ease.getPowOut(4));
 				
 					APP.activeProject = i;
 					document.body.setAttribute('data-project', i);
-					updateMask(APP.projects[i]);
+					document.body.style.color = color;
+					updateMask(project);
 			
 				}
 
@@ -123,26 +129,26 @@
 	// Browser resizing
 	// ----------------------------------------------------------
 
-	window.addEventListener("resize", resize);
+	// window.addEventListener("resize", resize);
 
-	function resize(){
+	// function resize(){
 		
-		var width = window.innerWidth - 15,
-			height = window.innerHeight;
+	// 	var width = window.innerWidth - 15,
+	// 		height = window.innerHeight;
 
-		stage.canvas.width = width;
-		stage.canvas.height = height;
-		stage.setBounds(0,0,width,height);
-		stage.regX = width / -2;
-		stage.regY = height / -2;
+	// 	stage.canvas.width = width;
+	// 	stage.canvas.height = height;
+	// 	stage.setBounds(0,0,width,height);
+	// 	stage.regX = width / -2;
+	// 	stage.regY = height / -2;
 		
-		rects.forEach(function (rect, i) {
-			var newGraphics = new createjs.Graphics().beginFill(rect.fill).drawRect(0, height * i, width, height);
-			rect.shape.regX = width / 2;
-			rect.shape.regY = height / 2;
-			rect.shape.set({ graphics: newGraphics });
-		});
+	// 	APP.projects.forEach(function (project, i) {
+	// 		var newGraphics = new createjs.Graphics().beginFill(project.fill).drawRect(0, height * i, width, height);
+	// 		project.shape.regX = width / 2;
+	// 		project.shape.regY = height / 2;
+	// 		project.shape.set({ graphics: newGraphics });
+	// 	});
 		
-	}
+	// }
 
 })(this);
