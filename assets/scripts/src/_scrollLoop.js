@@ -1,6 +1,7 @@
 (function(window){
 
-    var scrollTop = -1,
+	var SCROLL_LOOP = [],
+		scrollTop = -1,
 		requestFrame =  window.requestAnimationFrame ||
                         window.webkitRequestAnimationFrame ||
                         window.mozRequestAnimationFrame ||
@@ -23,7 +24,7 @@
 		scrollTop = window.pageYOffset;
 
 		// do your magic
-		APP.onScroll.forEach(function (fn) {
+		SCROLL_LOOP.forEach(function (fn) {
 			if (typeof fn == "function") {
 				fn(scrollTop);
 			}
@@ -35,6 +36,8 @@
 	}
 
 	// initialize loop()
-    loop();
+	loop();
+	
+	window.SCROLL_LOOP = SCROLL_LOOP;
     
 })(this);
