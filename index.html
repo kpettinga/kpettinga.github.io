@@ -36,7 +36,7 @@
 
 </head>
 
-<body data-project="0">
+<body>
 
 	<div id="page">
 
@@ -53,7 +53,7 @@
 					<img src="./assets/images/avatar.png" width="66" height="66" alt="avatar" />
 				</div>
 
-				<a href="#intro" class="brand mt-0 animate on-init fade-in from-right">
+				<a href="#hello" class="brand mt-0 animate on-init fade-in from-right">
 					<span class="h4">Kirk Pettinga</span>
 					<br/>
 					<em class="faded">Web Developer</em>
@@ -62,8 +62,10 @@
 			</div>
 			<div class="center">
 				<div id="headline" class="headline animate on-init fade-in from-left">
-					<a href="#intro" id="previous" title="previous">&uarr;</a>
-					<div id="headline-track" class="animate"><!-- populated by JS --></div>
+					<a href="#hello" id="previous" title="previous">&uarr;</a>
+					<div id="headline-track" class="animate">
+						<!-- populated by JS -->
+					</div>
 					<a href="#project-2" id="next" title="next">&darr;</a>
 				</div>
 			</div>
@@ -109,7 +111,7 @@
 	<script id="template-intro" type="template/mustache">
 		<section id="{{id}}" class="intro frame">
 			<div class="frame-media flex center-y">
-				<h1 class="mt-0"><span class="faded">Hi, I create</span><br/><span id="js-intro-text">things<span><br/><span class="faded">for the web.</span></h1>
+				<h1 class="mt-0 animate on-active fade-in from-right"><span class="faded">Hi, I create</span><br/><span id="js-intro-text">things</span><br/><span class="faded">for the web.</span></h1>
 			</div>
 		</section>
 	</script>
@@ -118,16 +120,16 @@
 			<div class="frame-media flex center-y center-x">
 				<form action="https://formsapi.jabwn.com/key/3hE5XKZew983fXwfMGvB" method="POST">
 					<div class="row">
-						<div class="field half">
+						<div class="field half-lg animate on-active fade-in from-left">
 							<input type="text" placeholder="Name" name="name" id="name"/>
 							<label for="name"><span style="display:none">Name</span></label>
 						</div>
-						<div class="field half">
+						<div class="field half-lg animate on-active fade-in from-right">
 							<input type="email" placeholder="Email" name="email" id="email" validate/>
 							<label for="email"><span style="display:none">Email</span></label>
 						</div>
 					</div>
-					<div class="field">
+					<div class="field animate on-active fade-in from-bottom delay-200">
 						<textarea rows="6" cols="8" placeholder="Message" name="message" id="message"></textarea>
 						<label for="message"><span style="display:none">Message</span></label>
 					</div>
@@ -135,7 +137,7 @@
 					<input type="hidden" name="_replyto" value="%email"/>
 					<input type="hidden" name="_subject" value="New submission from kirkpettinga.com"/>
 					<input type="hidden" name="_confirmation" value="Thanks for reaching out! I look forward to speaking with you. —Kirk">
-					<button type="submit" class="success"><i class="icon icon-send" aria-hidden="true"></i><span class="text">&nbsp;Hit me!</span></button>
+					<button type="submit" class="success animate on-active fade-in from-bottom delay-400"><i class="icon icon-send" aria-hidden="true"></i><span class="text">&nbsp;Hit me!</span></button>
 				</form>
 			</div>
 		</section>

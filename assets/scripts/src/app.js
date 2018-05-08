@@ -12,7 +12,6 @@
 		this.frameEls = [];
 		this.next = document.getElementById('next');
 		this.previous = document.getElementById('previous');
-		this.introText = document.getElementById('js-intro-text');
 
 		this.init();
 	};
@@ -30,7 +29,71 @@
 	
 	APP.prototype.animateIntroText = function() {
 
-		
+		var phrases = [
+				'things',
+				'frameworks',
+				'widgets',
+				'ui candy',
+				'maps',
+				'pattern libraries',
+				'emails',
+			],
+			current = 0,
+			textEl = document.getElementById('js-intro-text');
+
+		function updatePhrase(){
+
+			var currentPhrase = phrases[current],
+				index = currentPhrase.length,
+				currentPhraseDeleted = false;
+
+			current += 1;
+
+			var nextIndex = ( current === phrases.length ) ? 0 : current;
+				nextPhrase = phrases[nextIndex],
+				nextPhraseFinished = false;
+
+			// console.log( 'updatePhrase()', currentPhrase, nextPhrase );
+
+			function updateText() {
+
+				setTimeout(function(){
+					
+					if ( index > -1 && ! currentPhraseDeleted ){
+						textEl.innerText = currentPhrase.substring(0,index);
+						// console.log(currentPhrase.substring(0,index));
+						index--;
+					} else {
+						currentPhraseDeleted = true;
+					}
+
+					if ( currentPhraseDeleted && index <= nextPhrase.length ) {
+						textEl.innerText = nextPhrase.substring(0,index);
+						// console.log(nextPhrase.substring(0,index));
+						index++;
+
+						if ( index > nextPhrase.length ) {
+							nextPhraseFinished = true;
+						}
+					}
+
+					if ( currentPhraseDeleted && nextPhraseFinished ) {
+						setTimeout(updatePhrase, 2000);
+					} else {
+						updateText();
+					}
+						
+				}, 20);
+
+			}
+
+			current = nextIndex;
+
+			updateText();
+
+		}
+
+		setTimeout( updatePhrase, 2000 );
 
 	};
 
@@ -69,6 +132,16 @@
 
 		var THAT = this;
 
+		// clicking lets chat button automatically focuses first form field
+		document.querySelectorAll('[href="#lets-chat"]').forEach(function(link,i){
+			link.addEventListener('click', function(event){
+				event.preventDefault();
+				window.scrollTo( 0, document.getElementById('lets-chat').offsetTop );
+				document.getElementById('name').focus();
+			});
+		});
+
+		// arrow keys scroll between projects
 		document.addEventListener("keydown",function(event){
 			
 			var DOWN = 40, UP = 38,
@@ -127,7 +200,18 @@
 						THAT.canvas.style.backgroundColor = fill;
 						THAT.updateMask(frame, i);
 						document.body.style.color = color;
-						// history.pushState({},'',frame.id);
+						
+						if ( i === 0 ) {
+							document.body.classList.add('first-frame');
+						} else {
+							document.body.classList.remove('first-frame');
+						}
+
+						if ( i === THAT.frames.length - 1 ) {
+							document.body.classList.add('last-frame');
+						} else {
+							document.body.classList.remove('last-frame');
+						}
 	
 						if ( video ) {
 							video.play();
