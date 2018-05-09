@@ -203,16 +203,21 @@
 						THAT.updateMask(frame, i);
 						document.body.style.color = color;
 						
-						if ( i === 0 ) {
-							document.body.classList.add('first-frame');
-						} else {
-							document.body.classList.remove('first-frame');
-						}
-
-						if ( i === THAT.frames.length - 1 ) {
-							document.body.classList.add('last-frame');
-						} else {
-							document.body.classList.remove('last-frame');
+						switch(i) {
+							case 0:
+								document.body.classList.add('first-frame');
+								document.body.classList.remove('middle-frame');
+								document.body.classList.remove('last-frame');
+								break;
+							case THAT.frames.length - 1:
+								document.body.classList.add('last-frame');
+								document.body.classList.remove('middle-frame');
+								document.body.classList.remove('first-frame');
+								break;
+							default :
+								document.body.classList.add('middle-frame');
+								document.body.classList.remove('first-frame');
+								document.body.classList.remove('last-frame');
 						}
 	
 						if ( video ) {

@@ -27,8 +27,8 @@
                 { name: 'Non-Profit' },
                 { name: 'Community Engagement' },
                 { name: 'Wordpress' },
-                { name: 'Mapbox' },
-                { name: 'vue.js', last: true  }
+                { name: 'Mapbox.js' },
+                { name: 'Vue.js', last: true  }
             ],
             tagName: tagNameFn,
             role: 'Primary Developer',
