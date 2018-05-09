@@ -24,6 +24,8 @@
                 height: '898'
             },
             tags: [
+                { name: 'Non-Profit' },
+                { name: 'Community Engagement' },
                 { name: 'Wordpress' },
                 { name: 'Mapbox' },
                 { name: 'vue.js', last: true  }
@@ -47,6 +49,7 @@
                 height: '958'
             },
             tags: [
+                { name: 'Performing Arts' },
                 { name: 'Wordpress' },
                 { name: 'Events Calendar' },
                 { name: 'slick.js', last: true }
@@ -70,6 +73,8 @@
                 height: '810'
             },
             tags: [
+                { name: 'Non-Profit' },
+                { name: 'Transit' },
                 { name: 'Wordpress' },
                 { name: 'AJAX' },
                 { name: 'Modular Content', last: true }
@@ -82,7 +87,7 @@
         { 
             id: 'orpheus',
             headline: 'Orpheus Chamber Orchestra',
-            text: 'Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat. Donec sollicitudin molestie malesuada.',
+            text: "Orpheus is a a grammy-winning, conductorless orchestra based in New York City. They needed a website to keep patrons informed about their activities and performances around the world. We created a site which is built on a system of customizable tiles and colors the admins can use to create dynamic pages. It is also a source of information about the group's members, discography, and ticket outlets.",
             url: 'http://orpheusnyc.org/',
             urlText: 'orpheusnyc.org',
             video: {
@@ -93,7 +98,10 @@
                 height: '942'
             },
             tags: [
-                // { name: '', last: true }
+                { name: 'Performing Arts' },
+                { name: 'Wordpress' },
+                { name: 'Events Calendar' },
+                { name: 'Modular Content', last: true },
             ],
             tagName: tagNameFn,
             role: 'Primary Developer',         
@@ -103,7 +111,7 @@
         { 
             id: 'cgu',
             headline: 'Claremont Graduate University',
-            text: 'Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat. Donec sollicitudin molestie malesuada.',
+            text: 'Claremont Graduate University (CGU) is a research-based graduate institution based in Claremont, CA. After a brand "refresh" and extension, we sought to build a site which could act as a portal for faculty, visitors, and potential and current students. A suite of Wordpress themes was ultimately delivered which CGU could use to build everything from small sub-domain sites to faculty blogs. In addition, we built a brand site which acts as a tool for maintaining visual consistency accross the varied digital and print material developed by CGU staff &rarr; <a href="https://brand.cgu.edu/" target="_blank"><em>brand.cgu.edu</em></a>.',
             url: 'http://cgu.edu/',
             urlText: 'cgu.edu',
             video: {
@@ -114,7 +122,10 @@
                 height: '956'
             },
             tags: [
-                // { name: '', last: true }
+                { name: 'Higher Education' },
+                { name: 'Wordpress' },
+                { name: 'Pattern Portfolio' },
+                { name: 'AJAX', last: true }
             ],
             tagName: tagNameFn,
             role: 'Lead Front-End Developer',           

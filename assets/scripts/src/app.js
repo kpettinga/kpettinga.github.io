@@ -39,7 +39,9 @@
 				'emails',
 			],
 			current = 0,
-			textEl = document.getElementById('js-intro-text');
+			textEl = document.getElementById('js-intro-text'),
+			typingSpeed = 40,
+			nextWordSpeed = 2000;
 
 		function updatePhrase(){
 
@@ -49,7 +51,7 @@
 
 			current += 1;
 
-			var nextIndex = ( current === phrases.length ) ? 0 : current;
+			var nextIndex = ( current === phrases.length ) ? 0 : current,
 				nextPhrase = phrases[nextIndex],
 				nextPhraseFinished = false;
 
@@ -78,12 +80,12 @@
 					}
 
 					if ( currentPhraseDeleted && nextPhraseFinished ) {
-						setTimeout(updatePhrase, 2000);
+						setTimeout(updatePhrase, nextWordSpeed);
 					} else {
 						updateText();
 					}
 						
-				}, 20);
+				}, typingSpeed);
 
 			}
 
@@ -93,7 +95,7 @@
 
 		}
 
-		setTimeout( updatePhrase, 2000 );
+		setTimeout( updatePhrase, nextWordSpeed );
 
 	};
 
