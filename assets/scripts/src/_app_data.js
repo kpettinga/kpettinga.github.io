@@ -20,6 +20,7 @@
                 atts: 'loop muted preload="preload"',
                 webm: 'assets/video/hester-project-scroll.webm',
                 mp4: 'assets/video/hester-project-scroll.mp4',
+                poster: 'assets/images/hester-project-scroll.png',
                 width: '1584',
                 height: '898'
             },
@@ -45,6 +46,7 @@
                 atts: 'loop muted preload="preload"',
                 webm: 'assets/video/gibney-flow.webm',
                 mp4: 'assets/video/gibney-flow.mp4',
+                poster: 'assets/images/gibney-flow.png',
                 width: '1422',
                 height: '958'
             },
@@ -69,6 +71,7 @@
                 atts: 'loop muted preload="preload"',
                 webm: 'assets/video/transit-center-flow.webm',
                 mp4: 'assets/video/transit-center-flow.mp4',
+                poster: 'assets/images/transit-center-flow.png',
                 width: '1422',
                 height: '810'
             },
@@ -94,6 +97,7 @@
                 atts: 'loop muted preload="preload"',
                 webm: 'assets/video/orpheus-flow-1.webm',
                 mp4: 'assets/video/orpheus-flow-1.mp4',
+                poster: 'assets/images/orpheus-flow-1.png',
                 width: '1678',
                 height: '942'
             },
@@ -118,6 +122,7 @@
                 atts: 'loop muted preload="preload"',
                 webm: 'assets/video/cgu-flow.webm',
                 mp4: 'assets/video/cgu-flow.mp4',
+                poster: 'assets/images/cgu-flow.png',
                 width: '1424',
                 height: '956'
             },
