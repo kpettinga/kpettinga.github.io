@@ -95,7 +95,7 @@
 
 		}
 
-		setTimeout( updatePhrase, nextWordSpeed );
+		setTimeout( updatePhrase, nextWordSpeed * 2 );
 
 	};
 
