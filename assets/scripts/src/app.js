@@ -182,7 +182,8 @@
 			var frame = THAT.frames[i],
 				color = frame.color ? frame.color : '#222',
 				fill = frame.fill ? frame.fill : '#e8e8e8',
-				video = document.getElementById('video-' + i);
+				video = document.getElementById('video-' + i),
+				videoPromise;
 
 			updateFrame(window.pageYOffset);
 
@@ -221,7 +222,15 @@
 						}
 	
 						if ( video ) {
-							video.play();
+							videoPromise = video.play();
+							if ( videoPromise !== undefined ) {
+								videoPromise.then(function(){
+									// playback started!
+								}).catch(function(){
+									// render controls
+									video.setAttribute('controls', 'controls');
+								});
+							}
 						}
 					
 					}
