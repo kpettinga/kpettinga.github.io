@@ -32,7 +32,7 @@
                 { name: 'Vue.js', last: true  }
             ],
             tagName: tagNameFn,
-            role: 'Primary Developer',
+            role: 'Lead Developer',
             color: '#0085de',
             fill: '#0085de'
         },
@@ -58,7 +58,7 @@
                 { name: 'Vue.js', last: true  }
             ],
             tagName: tagNameFn,
-            role: 'Primary Developer',
+            role: 'Lead Developer',
             color: '#21b07a',
             fill: '#21b07a'
         },
@@ -66,8 +66,8 @@
             id: 'transit-center',
             headline: 'TransitCenter',
             text: 'TransitCenter is a foundation dedicated to urban mobility. They needed a website which would help them communicate with communities and policy makers in urban areas to affect change. We developed a modular system of content with which they can publish online reports about transit use. In addition, the site is also a place to search grant recipients, see upcoming events, and read their blog.',
-            url: 'http://transitcenter.org/',
-            urlText: 'transitcenter.org',
+            // url: 'http://transitcenter.org/',
+            // urlText: 'transitcenter.org',
             video: {
                 atts: 'loop muted preload="preload"',
                 webm: 'assets/video/transit-center-flow.webm',
@@ -84,7 +84,7 @@
                 { name: 'Modular Content', last: true }
             ],
             tagName: tagNameFn,
-            role: 'Primary Developer',         
+            role: 'Lead Developer',         
             color: '#5E28B2',
             fill: '#5E28B2'
         },
@@ -92,8 +92,8 @@
             id: 'gibney',
             headline: 'Gibney',
             text: 'Gibney, formerly Gibney Dance, is an organization whose mission is to bring the possibility of movement where it otherwise would not exist. Their new site seeks to emphasize the full scope of Gibney, acting as a portal connecting users to the myriads of performances, workshops, and weekly events.',
-            url: 'http://gibneydance.org/',
-            urlText: 'gibneydance.org',
+            // url: 'http://gibneydance.org/',
+            // urlText: 'gibneydance.org',
             video: {
                 atts: 'loop muted preload="preload"',
                 webm: 'assets/video/gibney-flow.webm',
@@ -109,7 +109,7 @@
                 { name: 'slick.js', last: true }
             ],
             tagName: tagNameFn,
-            role: 'Primary Developer',
+            role: 'Lead Developer',
             color: '#000000',
             fill: '#111'
         },
@@ -117,8 +117,8 @@
             id: 'orpheus',
             headline: 'Orpheus Chamber Orchestra',
             text: "Orpheus is a a grammy-winning, conductorless orchestra based in New York City. They needed a website to keep patrons informed about their activities and performances around the world. We created a site which is built on a system of customizable tiles and colors the admins can use to create dynamic pages. It is also a source of information about the group's members, discography, and ticket outlets.",
-            url: 'http://orpheusnyc.org/',
-            urlText: 'orpheusnyc.org',
+            // url: 'http://orpheusnyc.org/',
+            // urlText: 'orpheusnyc.org',
             video: {
                 atts: 'loop muted preload="preload"',
                 webm: 'assets/video/orpheus-flow-1.webm',
@@ -134,7 +134,7 @@
                 { name: 'Modular Content', last: true },
             ],
             tagName: tagNameFn,
-            role: 'Primary Developer',         
+            role: 'Lead Developer',         
             color: '#C48014',
             fill: '#C48014'
         },

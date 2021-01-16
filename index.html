@@ -96,11 +96,15 @@
 						<p>Role: {{role}}</p>
 					</div>
 					<div class="right">
+						{{#url}}
+							<p class="mb-1 mt-0">
+								<a target="_blank" href="{{{url}}}"><strong class="sans-serif">{{urlText}} <i class="icon icon-send" aria-hidden="true" style="vertical-align:middle"></i></strong></a>
+							</p>
+						{{/url}}
 						<p class="mt-0">
-							<a target="_blank" href="{{{url}}}"><strong class="sans-serif">{{urlText}} <i class="icon icon-send" aria-hidden="true" style="vertical-align:middle"></i></strong></a>
-						</p>
-						<p>
-							<em>{{#tags}}{{{tagName}}}{{/tags}}</em>
+							{{#tags}}
+								<em>{{{tagName}}}</em>
+							{{/tags}}
 						</p>
 					</div>
 				</div>
