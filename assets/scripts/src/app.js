@@ -29,33 +29,38 @@
 	
 	APP.prototype.animateIntroText = function() {
 		var phrases = [
-				'things',
-				'frameworks',
-				'ui candy',
-				'maps',
-				'pattern libraries',
-				'emails',
+				'sparkles',
+				'eye candy',
+				'zinggggg',
+				'goosebumps',
+				'zen',
+				'fun stuff',
+				'rainbows',
+				'hot fire',
 			],
 			colors = ['#0085de', '#21b07a', '#5E28B2', '#000000', '#C48014', '#AF1E27'],
-			current = 0,
+			current = Math.floor(Math.random() * 12),
+			color = 0,
 			textEl = document.getElementById('js-intro-text'),
 			typingSpeed = 20,
-			nextWordSpeed = 1200;
+			nextWordSpeed = 2000;
+
+		textEl.innerText = phrases[current];
 
 		function updatePhrase(){
 
-			var currentPhrase = phrases[current],
+			var currentPhrase = textEl.innerText,
 				index = currentPhrase.length,
 				currentPhraseDeleted = false;
 
 			current += 1;
+			color += 1;
 
-			var nextIndex = ( current === phrases.length ) ? 0 : current,
-				nextPhrase = phrases[nextIndex],
-				nextColor = colors[nextIndex],
+			var nextIndex 		= ( current === phrases.length ) ? 0 : current,
+				nextColorIndex 	= ( color === colors.length ) ? 0 : color,
+				nextPhrase 		= phrases[nextIndex],
+				nextColor 		= colors[nextColorIndex],
 				nextPhraseFinished = false;
-
-			// console.log( 'updatePhrase()', currentPhrase, nextPhrase );
 
 			function updateText() {
 
@@ -91,6 +96,7 @@
 			}
 
 			current = nextIndex;
+			color = nextColorIndex;
 
 			updateText();
 
