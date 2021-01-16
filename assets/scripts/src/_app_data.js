@@ -11,6 +11,32 @@
             template: 'intro'
         },
         { 
+            id: 'wallcore',
+            headline: 'Wallcore.com',
+            text: 'Wallcore is an online picture framing startup that partners with local frame shops. I worked with the partners to design and implement a robust web app with which users were able to mat and frame their images, customize design options, and pickup the completed product from their local framer.',
+            url: 'https://www.wallcore.com',
+            urlText: 'wallcore.com',
+            video: {
+                atts: 'loop muted preload="preload"',
+                webm: 'assets/video/wallcore-design-tool.webm',
+                mp4: 'assets/video/wallcore-design-tool.mp4',
+                poster: 'assets/images/wallcore-design-tool.png',
+                width: '1440',
+                height: '810'
+            },
+            tags: [
+                { name: 'E-Commerce' },
+                { name: 'Custom Picture Framing' },
+                { name: 'Craft CMS' },
+                { name: 'ReactJS' },
+                { name: 'Vue.js', last: true  }
+            ],
+            tagName: tagNameFn,
+            role: 'Primary Developer',
+            color: '#0085de',
+            fill: '#0085de'
+        },
+        { 
             id: 'hester-street',
             headline: 'Hester Street Collaborative',
             text: 'Hester Street is an urban planning, design and development nonprofit based in the Lower East Side of Manhattan. After a rebranding process, we built a website which allows them to showcase their impact on the communities they serve.',
@@ -33,33 +59,8 @@
             ],
             tagName: tagNameFn,
             role: 'Primary Developer',
-            color: '#3266CC',
-            fill: '#3266CC'
-        },
-        { 
-            id: 'gibney',
-            headline: 'Gibney',
-            text: 'Gibney, formerly Gibney Dance, is an organization whose mission is to bring the possibility of movement where it otherwise would not exist. Their new site seeks to emphasize the full scope of Gibney, acting as a portal connecting users to the myriads of performances, workshops, and weekly events.',
-            url: 'http://gibneydance.org/',
-            urlText: 'gibneydance.org',
-            video: {
-                atts: 'loop muted preload="preload"',
-                webm: 'assets/video/gibney-flow.webm',
-                mp4: 'assets/video/gibney-flow.mp4',
-                poster: 'assets/images/gibney-flow.png',
-                width: '1422',
-                height: '958'
-            },
-            tags: [
-                { name: 'Performing Arts' },
-                { name: 'Wordpress' },
-                { name: 'Events Calendar' },
-                { name: 'slick.js', last: true }
-            ],
-            tagName: tagNameFn,
-            role: 'Primary Developer',
-            color: '#000000',
-            fill: '#111'
+            color: '#21b07a',
+            fill: '#21b07a'
         },
         { 
             id: 'transit-center',
@@ -86,6 +87,31 @@
             role: 'Primary Developer',         
             color: '#5E28B2',
             fill: '#5E28B2'
+        },
+        { 
+            id: 'gibney',
+            headline: 'Gibney',
+            text: 'Gibney, formerly Gibney Dance, is an organization whose mission is to bring the possibility of movement where it otherwise would not exist. Their new site seeks to emphasize the full scope of Gibney, acting as a portal connecting users to the myriads of performances, workshops, and weekly events.',
+            url: 'http://gibneydance.org/',
+            urlText: 'gibneydance.org',
+            video: {
+                atts: 'loop muted preload="preload"',
+                webm: 'assets/video/gibney-flow.webm',
+                mp4: 'assets/video/gibney-flow.mp4',
+                poster: 'assets/images/gibney-flow.png',
+                width: '1422',
+                height: '958'
+            },
+            tags: [
+                { name: 'Performing Arts' },
+                { name: 'Wordpress' },
+                { name: 'Events Calendar' },
+                { name: 'slick.js', last: true }
+            ],
+            tagName: tagNameFn,
+            role: 'Primary Developer',
+            color: '#000000',
+            fill: '#111'
         },
         { 
             id: 'orpheus',

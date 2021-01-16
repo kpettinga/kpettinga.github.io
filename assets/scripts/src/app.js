@@ -28,20 +28,19 @@
 	};
 	
 	APP.prototype.animateIntroText = function() {
-
 		var phrases = [
 				'things',
 				'frameworks',
-				'widgets',
 				'ui candy',
 				'maps',
 				'pattern libraries',
 				'emails',
 			],
+			colors = ['#0085de', '#21b07a', '#5E28B2', '#000000', '#C48014', '#AF1E27'],
 			current = 0,
 			textEl = document.getElementById('js-intro-text'),
-			typingSpeed = 40,
-			nextWordSpeed = 2000;
+			typingSpeed = 20,
+			nextWordSpeed = 1200;
 
 		function updatePhrase(){
 
@@ -53,6 +52,7 @@
 
 			var nextIndex = ( current === phrases.length ) ? 0 : current,
 				nextPhrase = phrases[nextIndex],
+				nextColor = colors[nextIndex],
 				nextPhraseFinished = false;
 
 			// console.log( 'updatePhrase()', currentPhrase, nextPhrase );
@@ -70,6 +70,7 @@
 					}
 
 					if ( currentPhraseDeleted && index <= nextPhrase.length ) {
+						textEl.style.color = nextColor;
 						textEl.innerText = nextPhrase.substring(0,index);
 						// console.log(nextPhrase.substring(0,index));
 						index++;
