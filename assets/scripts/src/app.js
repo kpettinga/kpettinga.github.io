@@ -1,6 +1,5 @@
 (function (window) {
 
-
 	var APP = function(FRAMES) {
 
 		this.activeFrame = 0;
@@ -34,12 +33,10 @@
 				'zinggggg',
 				'goosebumps',
 				'zen',
-				'fun stuff',
 				'rainbows',
-				'hot fire',
 			],
 			colors = ['#0085de', '#21b07a', '#5E28B2', '#000000', '#C48014', '#AF1E27'],
-			current = Math.floor(Math.random() * 12),
+			current = Math.floor(Math.random() * phrases.length),
 			color = 0,
 			textEl = document.getElementById('js-intro-text'),
 			typingSpeed = 20,
