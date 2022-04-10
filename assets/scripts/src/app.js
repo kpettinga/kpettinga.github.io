@@ -42,6 +42,8 @@
 			typingSpeed = 20,
 			nextWordSpeed = 2000;
 
+		console.log(current);
+
 		textEl.innerText = phrases[current];
 
 		function updatePhrase(){
