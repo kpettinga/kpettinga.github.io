@@ -1,4 +1,3 @@
-.sass-cache/
-*.scss
 node_modules
 .DS_Store
+build
