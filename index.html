@@ -1,167 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Kirk Pettinga | Web Developer</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-	<meta property="og:title" content="Kirk Pettinga">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="http://www.kirkpettinga.com/">
-	<meta property="og:description" content="Front End Developer - I build web interfaces.">
-	<meta property="og:site_name" content="kirk pettinga">
-	<meta property="og:image" content="http://www.kirkpettinga.com/og-image.jpg">
-
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:url" content="http://www.kirkpettinga.com/">
-	<meta name="twitter:title" content="Kirk Pettinga">
-	<meta name="twitter:description" content="Front End Developer - I build web interfaces.">
-	<meta name="twitter:image" content="http://www.kirkpettinga.com/og-image.jpg">
-
-	<link rel="apple-touch-icon" href="./apple-touch-icon.png">
-
-	<link rel="stylesheet" href="./assets/css/style.css" />
-	<!-- <link rel="stylesheet" href="./assets/css/style.min.css" /> -->
-
-	<script src="https://use.typekit.net/wrw0mnw.js"></script>
-	<script>
-		try {
-			Typekit.load({
-				async: true
-			});
-		} catch (e) {}
-	</script>
-
-</head>
-
-<body>
-
-	<div id="page">
-
-		<canvas id="canvas" role="presentation"></canvas>
-
-		<main id="frames">
-			<!-- populated by JS -->
-		</main>
-
-		<div class="mask">
-			<div class="top">
-
-				<div class="avatar animate on-init fade-in from-left">
-					<img src="./assets/images/avatar.png" width="66" height="66" alt="avatar" />
-				</div>
-
-				<a href="#hello" class="brand mt-0 animate on-init fade-in from-right">
-					<span class="h4">Kirk Pettinga</span>
-					<br/>
-					<em class="faded">Web Developer</em>
-				</a>
-			
-			</div>
-			<div class="center">
-				<div id="headline" class="headline animate on-init fade-in from-left">
-					<a href="#hello" id="previous" title="previous">&uarr;</a>
-					<div id="headline-track" class="animate">
-						<!-- populated by JS -->
-					</div>
-					<a href="#project-2" id="next" title="next">&darr;</a>
-				</div>
-			</div>
-			<div class="bottom">
-				<a href="#lets-chat" class="cta-chat button">
-					<i class="icon icon-chat" aria-hidden="true"></i>
-					<span class="text">&nbsp; Let's Chat</span>
-				</a>
-			</div>
-		</div>
-
-	</div>
-
-	<script id="template-project" type="template/mustache">
-		<section id="{{id}}" class="project-{{i}} frame">
-			<div class="frame-media">
-				
-				<div class="frame-video flex center-x center-y">
-					<video id="video-{{i}}" {{{video.atts}}} poster="{{video.poster}}" width="{{video.width}}" height="{{video.height}}" class="animate on-active fade-in from-right">
-						<source src="{{video.webm}}" type="video/webm" />
-						<source src="{{video.mp4}}" type="video/mp4" />
-					</video>
-				</div>
-			
-				<div class="frame-text body-text animate on-active fade-in from-left">
-					<div class="left underline-links ">
-						<p class="mt-0">{{{text}}}</p>
-						<p>Role: {{role}}</p>
-					</div>
-					<div class="right">
-						{{#url}}
-							<p class="mb-1 mt-0">
-								<a target="_blank" href="{{{url}}}"><strong class="sans-serif">{{urlText}} <i class="icon icon-send" aria-hidden="true" style="vertical-align:middle"></i></strong></a>
-							</p>
-						{{/url}}
-						<p class="mt-0">
-							{{#tags}}
-								<em>{{{tagName}}}</em>
-							{{/tags}}
-						</p>
-					</div>
-				</div>
-			
-			</div>
-		</section>
-	</script>
-	<script id="template-intro" type="template/mustache">
-		<section id="{{id}}" class="intro frame">
-			<div class="frame-media flex center-y">
-				<h1 class="mt-0 animate on-active fade-in from-right"><span class="faded">Hi, I create</span><br/><span id="js-intro-text" style="color:#0085de;white-space:nowrap"></span><br/><span class="faded">for the web.</span></h1>
-			</div>
-		</section>
-	</script>
-	<script id="template-outro" type="template/mustache">
-		<section id="{{id}}" class="outro frame">
-			<div class="frame-media">
-				<h4 class="text-center">Have a web project?<br/>I'd love to chat.</h4>
-				
-				<div class="text-center my-1"><a href="mailto:kirk.pettinga@gmail.com" class="block button success animate on-active fade-in from-bottom delay-400"><i class="icon icon-send" aria-hidden="true"></i><span class="text">&nbsp;Hit me!</span></a></div>
-
-				<p class="mt-2 text-center sans-serif animate on-active fade-in from-bottom delay-600"><a href="https://github.com/kpettinga/" target="_blank"><i class="icon icon-github" aria-hidden="true"></i> <strong>github</strong></a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://www.linkedin.com/in/kirk-pettinga-15794144/" target="_blank"><i class="icon icon-linkedin" aria-hidden="true"></i> <strong>linkedin</strong></a></p>
-				<h4 class="mt-2 text-center animate on-active fade-in from-bottom delay-600">A bit about me</h4>
-				<div class="body-text underline-links animate on-active fade-in from-bottom delay-600 mx-auto" style="max-width:700px">
-					<div class="left">
-						<p>
-							Michigan born, I earned my BFA in Graphic Design from Western Michigan University in 2010. 
-							Upon graduation I promptly moved to New York City for an internship at <a href="http://beardwood.com/" target="_blank">Beardwood & Co</a>. 
-							While package design wasn't necessarily my thing, it was a fantastic learning opportunity and it actually led to my next posting at <a href="http://objectivesubject.com" target="_blank">Objective Subject</a> (OS) in November of 2010.
-							As a designer at OS, I got my hands dirty with some code and the interaction between technology and design got me hooked. 
-							Until 2018, I lead the development front on all of OS's web design projects, ensuring that high quality design didn't get fumbled on the web.
-						</p>
-						<p>
-							Recently, I've been leading development for <a href="https://www.wallcore.com">Wallcore.com</a>, working to bring custom picture framing tools to the web.
-							When I'm not coding, you can find me adventuring around the world with my wife and 2 kids. I love astronomy, sci-fi art, and anything that flies. Someday I plan to build my own <a href="https://www.kitplanes.com/">kitplane</a>.
-						</p>
-						<p>
-							I'm always interested to hear about your next idea, so <a href="#lets-chat"><em>drop me a line</em></a>!
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-	</script>
-	<!-- <script src="./assets/scripts/main.js"></script> -->
-	<script src="./assets/scripts/main.min.js"></script>
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23227738-1"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'UA-23227738-1');
-	</script>
-
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kirk Pettinga | Software Engineer | Designer</title>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;800&display=swap" rel="stylesheet">
+  </head>
+  <body class="min-h-dvh w-full text-white bg-midnight-800 font-light text-base md:text-xl" style="overflow:auto">
+    <div id="app" class="w-full h-full flex flex-col gap-[25dvh]"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

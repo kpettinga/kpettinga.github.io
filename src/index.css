@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@import "./theme.css";
+
+::selection {
+  background: #38386B;
+  color: #ffffff;
+}
+
+small {
+  font-size: 70%;
+}
+
+strong {
+  @apply font-semibold;
+}
+
+mark {
+  @apply inline rounded-[.1em] font-semibold bg-mint-400 text-midnight-800 px-1;
+}

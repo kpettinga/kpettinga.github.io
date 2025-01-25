@@ -1,15 +1,22 @@
 {
   "name": "kpettinga.github.io",
-  "version": "2.0.0",
-  "description": "Portfolio site for Kirk Pettinga",
-  "main": "index.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kpettinga/kpettinga.github.io.git"
+  "dependencies": {
+    "preact": "^10.25.3"
   },
-  "author": "Kirk Pettinga",
-  "license": "MIT",
+  "devDependencies": {
+    "@preact/preset-vite": "^2.9.3",
+    "@tailwindcss/vite": "^4.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.0",
+    "vite": "^6.0.5"
+  }
 }
