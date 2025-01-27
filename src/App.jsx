@@ -66,8 +66,8 @@ export function App() {
               height={project.video.height}
               class="aspect-video object-cover w-full h-auto"
             >
-              <source src={project.video.webm} type="video/webm" />
-              <source src={project.video.mp4} type="video/mp4" />
+              { project.video.webm && <source src={project.video.webm} type="video/webm" /> }
+              { project.video.mp4 && <source src={project.video.mp4} type="video/mp4" /> }
             </video>
           </div>
           <div className="max-w-4xl px-4 md:px-8 grid gap-4 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
@@ -86,8 +86,8 @@ export function App() {
             <div className="sm:col-span-1">
               <div className="opacity-50"><small><strong>Stack</strong></small></div>
               <ul>
-                { project.tags.map(tag => (
-                  <li className="text-sm"><mark>{tag}</mark></li>
+                { project.stack.map(tech => (
+                  <li className="text-sm"><mark>{tech}</mark></li>
                 )) }
               </ul>
             </div>
