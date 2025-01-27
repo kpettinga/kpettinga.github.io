@@ -31,9 +31,9 @@ export const projects = [
   },
   {
     id: "wallcore",
-    title: "Wallcore.com",
+    title: "Wallcore",
     description: "Wallcore was an online picture framing startup that aimed to connect users with local frame shops in their area. I worked with the partners to design and implement a robust web app where users were able to mat and frame their images, customize design options, and pickup the completed product from their local framer.",
-    // url: "https://www.wallcore.com",
+    url: "https://mydiywall.com",
     video: {
       webm: "assets/video/wallcore-design-tool.webm",
       mp4: "assets/video/wallcore-design-tool.mp4",

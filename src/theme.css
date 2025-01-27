@@ -1,9 +1,7 @@
 @theme {
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-sans: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  /* --font-sans: 'JetBrains Mono', monospace; */
   --font-mono: 'JetBrains Mono', monospace;
-
-  --animate-blink: blink 0.75s step-start infinite;
-  --animate-dialRight: dialRight 1s ease-in-out;
 
   --color-mint-50: #F2FFF8;
   --color-mint-100: #DFFFEF;
@@ -35,7 +33,7 @@
 
   @keyframes dialRight {
     0% {
-      transform: rotateY(-45deg) translateX(-50%);
+      transform: rotateY(-15deg) translateX(-50%);
     }
     75% {
       transform: rotateY(0deg) translateX(5%);
@@ -44,7 +42,25 @@
       transform: rotateY(0deg) translateX(0);
     }
   }
+  
+  @keyframes dialUp {
+    0% {
+      transform: rotate3d(15deg,0,0) translate3d(0,50%,0);
+    }
+    75% {
+      transform: rotate3d(0deg) translate3d(0,-5%,0);
+    }
+    100% {
+      transform: rotate3d(0deg) translate3d(0,0,0);
+    }
+  }
 
   --transition-duration-400: 400ms;
+  
   --ease-snappy: cubic-bezier(0.9,0,0.5,1);
+  --ease-out: cubic-bezier(0,0.8,0.3,1);
+  
+  --animate-blink: blink 0.75s step-start infinite;
+  --animate-dialRight: dialRight 1s ease-in-out;
+  --animate-dialUp: dialUp 1s ease-in-out;
 }

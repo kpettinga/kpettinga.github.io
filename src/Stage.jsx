@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "preact/hooks";
 import { cn } from "./utilities";
 
-export default ({ className, children, ...restProps }) => {
+export default ({ className, id, onActive = () => null, children, ...restProps }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
@@ -11,11 +11,12 @@ export default ({ className, children, ...restProps }) => {
         // console.log(entry.rootBounds.height, entry.boundingClientRect.bottom, entry.rootBounds.height);
         if (entry.isIntersecting) {
           setIsVisible(true);
+          onActive(id)
         } else {
           setIsVisible(false);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.4 }
       // { threshold: Array.from({ length: ref.current.offsetHeight }, (_, i) => i / ref.current.offsetHeight) }
     );
 
@@ -29,6 +30,7 @@ export default ({ className, children, ...restProps }) => {
   return (
     <article
       ref={ref}
+      id={id}
       className={cn(
         "group/stage flex flex-col items-center justify-center w-dvw min-h-dvh p-8",
         (isVisible ? 'is-visible' : ''),

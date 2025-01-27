@@ -2,8 +2,8 @@
 @import "./theme.css";
 
 ::selection {
-  background: #38386B;
-  color: #ffffff;
+  background: var(--color-mint-400);
+  color: var(--color-midnight-900);
 }
 
 small {
@@ -14,6 +14,10 @@ strong {
   @apply font-semibold;
 }
 
+code {
+  @apply font-thin;
+}
+
 mark {
-  @apply inline rounded-[.1em] font-semibold bg-mint-400 text-midnight-800 px-1;
+  @apply inline rounded-[.05em] font-black bg-mint-400 text-midnight-900 px-[0.25em];
 }
