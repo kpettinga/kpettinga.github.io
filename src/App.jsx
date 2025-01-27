@@ -1,13 +1,15 @@
 import { useEffect, useState } from "preact/hooks";
-import Intro from "./Intro.dep";
+// import Intro from "./Intro.dep";
 import Stage from "./Stage";
-import MousePointer from "./MousePointer";
+// import MousePointer from "./MousePointer";
 import SmoothScroll from "./SmoothScroll";
 import Terminal from "./Terminal";
-import { projects } from "./data";
 import Background from "./Background";
+import { projects } from "./data";
 
 export function App() {
+
+  const [activeProject, setActiveProject] = useState(0)
 
   return (
     <>
@@ -21,11 +23,11 @@ export function App() {
         <Terminal />
         <h2 className="w-full max-w-xl px-4">
           I'm <span>Kirk Pettinga</span>, a{" "}
-          <SmoothScroll to="#wallcore">
+          <SmoothScroll to="#cvr">
             <span>software engineer</span>
           </SmoothScroll>
           ,{" "}
-          <SmoothScroll to="#wallcore">
+          <SmoothScroll to="#cvr">
             <span>designer</span>
           </SmoothScroll>
           , <span>dad and husband</span>, and general <span>nerd</span> .{" "}
@@ -34,7 +36,7 @@ export function App() {
         </h2>
         <p className="w-full max-w-xl px-4">
           <SmoothScroll
-            to="#wallcore"
+            to="#cvr"
             className="rounded-lg transition-all border border-transparent -ml-4 px-4 py-3 hover:border-black/5 hover:shadow-xl hover:scale-[1.05]"
           >
             Scroll to see some of my work&nbsp;&nbsp;
@@ -52,13 +54,12 @@ export function App() {
           <div
             className="
               w-full max-w-6xl p-0 rounded-xl shadow-2xl overflow-hidden 
-              transition-all ease-snappy 
-              opacity-0 group-[.is-visible]:opacity-100
-              scale-75 group-[.is-visible]:scale-100
-              -rotate-x-45 group-[.is-visible]:rotate-x-0
-              translate-y-1/4 group-[.is-visible]:translate-y-0
+              transition-all ease-in-out duration-[1000ms]
+              opacity-0 group-[.is-visible]/stage:opacity-100
+              scale-75 group-[.is-visible]/stage:scale-100
+              -rotate-y-45 group-[.is-visible]/stage:rotate-y-0
+              group-[.is-visible]/stage:animate-dialRight
             "
-            style={{transition: 'all 400ms ease-out'}}
           >
             <video loop muted preload="preload" autoplay
               poster={project.video.poster}
@@ -70,7 +71,12 @@ export function App() {
               { project.video.mp4 && <source src={project.video.mp4} type="video/mp4" /> }
             </video>
           </div>
-          <div className="max-w-4xl px-4 md:px-8 grid gap-4 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="
+            max-w-4xl px-4 md:px-8 grid gap-4 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
+            transition-all ease-in-out duration-500 delay-500
+            opacity-0 group-[.is-visible]/stage:opacity-100
+            translate-y-12 group-[.is-visible]/stage:translate-y-0
+          ">
             <div className="sm:col-span-1 lg:col-span-2">
               <div className="opacity-50"><small><strong>Product</strong></small></div>
               <h2 className="text-3xl font-extralight">{project.title}</h2>

@@ -5,9 +5,9 @@ export default function Terminal() {
   return (
     <pre
       role="presentation"
-      className="font-mono text-2xl md:text-[4vw] !leading-loose p-4 md:px-[2vw] md:py-[1.5vw] rounded-xl shadow-2xl origin-top"
+      className="font-mono text-[7vw] md:text-[6vw] lg:text-[5vw] xl:text-[4vw] py-[0.5em] px-[1em] !leading-loose rounded-xl shadow-2xl"
       style={{
-        backgroundImage: `linear-gradient(7deg,rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0.12) 100%)`
+        backgroundImage: `linear-gradient(7deg,rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.4) 100%)`
       }}
     >
       <code>~/ Hey,</code>

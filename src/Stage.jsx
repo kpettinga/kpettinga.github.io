@@ -1,22 +1,22 @@
 import { useRef, useState, useEffect } from "preact/hooks";
 import { cn } from "./utilities";
 
-export default (props) => {
-  const { className, children, ...restProps } = props;
-
+export default ({ className, children, ...restProps }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
+        // console.log(entry.rootBounds.height, entry.boundingClientRect.bottom, entry.rootBounds.height);
         if (entry.isIntersecting) {
           setIsVisible(true);
         } else {
           setIsVisible(false);
         }
       },
-      { threshold: 0.5 } // Trigger when 10% of the image is visible
+      { threshold: 0.5 }
+      // { threshold: Array.from({ length: ref.current.offsetHeight }, (_, i) => i / ref.current.offsetHeight) }
     );
 
     if (ref.current) {
@@ -30,7 +30,7 @@ export default (props) => {
     <article
       ref={ref}
       className={cn(
-        "group flex flex-col items-center justify-center w-dvw min-h-dvh p-8",
+        "group/stage flex flex-col items-center justify-center w-dvw min-h-dvh p-8",
         (isVisible ? 'is-visible' : ''),
         className
       )}
