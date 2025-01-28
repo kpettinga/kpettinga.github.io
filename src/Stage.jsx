@@ -23,7 +23,7 @@ export default function Stage({ className, id, children, ...restProps }) {
     }
 
     return () => observer.disconnect();
-  }, [id]);
+  }, []);
 
   return (
     <article

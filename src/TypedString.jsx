@@ -26,7 +26,7 @@ export default function TypedString({string, speed = 100, delayAfter = 0, then =
     return () => {
       clearInterval(typeIntervalId)
     }
-  }, [delayAfter, speed, string, then])
+  }, [])
 
   return <>
     {typed}

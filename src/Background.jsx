@@ -27,7 +27,7 @@ export default function Background() {
       requestAnimationFrame(setLinearGradient)
     }
     requestAnimationFrame(setLinearGradient)
-  }, [linearColorAngle, linearColorTo]) 
+  }, []) 
 
   return (
     <>
