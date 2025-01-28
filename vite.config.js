@@ -5,5 +5,13 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [preact(), tailwindcss()],
+  plugins: [
+    preact({
+      prerender: {
+        enabled: true,
+        renderTarget: '#app',
+      },
+    }), 
+    tailwindcss()
+  ],
 })

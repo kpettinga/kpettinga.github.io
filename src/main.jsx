@@ -1,5 +1,11 @@
-import { render } from 'preact'
-import './index.css'
+import { hydrate, prerender as ssr } from 'preact-iso';
 import { App } from './App.jsx'
+import './index.css'
 
-render(<App />, document.getElementById('app'))
+if (typeof window !== 'undefined') {
+	hydrate(<App />, document.getElementById('app'));
+}
+
+export async function prerender(data) {
+	return await ssr(<App {...data} />);
+}

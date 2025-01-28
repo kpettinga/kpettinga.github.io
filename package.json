@@ -1,7 +1,7 @@
 {
   "name": "kpettinga.github.io",
   "private": true,
-  "version": "0.0.0",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "preact": "^10.25.3"
+    "preact": "^10.25.3",
+    "preact-iso": "^2.8.1",
+		"preact-render-to-string": "^6.5.13"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.9.3",
@@ -17,6 +19,11 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.1",
     "tailwindcss": "^4.0.0",
+    "eslint": "^8.57.1",
+		"eslint-config-preact": "^1.5.0",
     "vite": "^6.0.5"
-  }
+  },
+  "eslintConfig": {
+		"extends": "preact"
+	}
 }

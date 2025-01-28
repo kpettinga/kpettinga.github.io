@@ -13,7 +13,7 @@ export default function MousePointer() {
       setX(e.pageX);
       setY(e.pageY);
     }
-    function handleScroll(e) {
+    function handleScroll() {
       setOpacity(0)
     }
     document.addEventListener("mousemove", handleMouseMove);
@@ -22,13 +22,12 @@ export default function MousePointer() {
       document.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [opacity]);
 
   return (
     <div
       className="absolute -top-4 -left-4 rounded-full size-8 border-4 border-midnight-800 mix-blend-difference transition-opacity duration-200 ease-out"
       style={{ transform: `translate3d(${x}px,${y}px,0)`, opacity }}
-    >
-    </div>
+    />
   );
 }

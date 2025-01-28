@@ -1,6 +1,6 @@
 import { useEffect, useState } from "preact/hooks"
 
-export default function TypedString({string, speed = 100, delayAfter = 0, then = () => null, children}) {
+export default function TypedString({string, speed = 100, delayAfter = 0, then = () => null, children = null}) {
   const [typed, setTyped] = useState('')
   const [showChildren, setShowChildren] = useState(false)
 
@@ -26,7 +26,7 @@ export default function TypedString({string, speed = 100, delayAfter = 0, then =
     return () => {
       clearInterval(typeIntervalId)
     }
-  }, [])
+  }, [delayAfter, speed, string, then])
 
   return <>
     {typed}

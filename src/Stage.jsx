@@ -1,17 +1,15 @@
 import { useRef, useState, useEffect } from "preact/hooks";
 import { cn } from "./utilities";
 
-export default ({ className, id, onActive = () => null, children, ...restProps }) => {
+export default function Stage({ className, id, children, ...restProps }) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // console.log(entry.rootBounds.height, entry.boundingClientRect.bottom, entry.rootBounds.height);
         if (entry.isIntersecting) {
           setIsVisible(true);
-          onActive(id)
         } else {
           setIsVisible(false);
         }
@@ -25,7 +23,7 @@ export default ({ className, id, onActive = () => null, children, ...restProps }
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [id]);
 
   return (
     <article
@@ -42,4 +40,4 @@ export default ({ className, id, onActive = () => null, children, ...restProps }
       {children}
     </article>
   );
-};
+}
