@@ -29,7 +29,7 @@ export default function Intro() {
         )}>
         <SmoothScroll to="#contact" className="inline-block transition-all hover:bg-black/30" >{'Contact me'}</SmoothScroll>
         &nbsp;&nbsp;<span className="opacity-30 font-bold">/</span>&nbsp;&nbsp;
-        <a href="/KirkPettinga.pdf" download={"KirkPettinga.pdf"} className="inline-block transition-all hover:bg-black/30">{'View Resume'}</a>
+        <a href="/assets/KirkPettinga.pdf" target={"_blank"} rel="noopener noreferrer" className="inline-block transition-all hover:bg-black/30">{'View Resume'}</a>
       </p>
       <p className={cn(
           "w-full max-w-xl px-4 transition-all duration-500 ease-out",
