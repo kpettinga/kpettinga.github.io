@@ -27,9 +27,17 @@ export default function Intro() {
           "w-full max-w-xl px-4 transition-all duration-500 ease-out",
           ( ready ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0" )
         )}>
+        <SmoothScroll to="#contact" className="inline-block transition-all hover:bg-black/30" >{'Contact me'}</SmoothScroll>
+        &nbsp;&nbsp;<span className="opacity-30 font-bold">/</span>&nbsp;&nbsp;
+        <a href="/KirkPettinga.pdf" download={"KirkPettinga.pdf"} className="inline-block transition-all hover:bg-black/30">{'View Resume'}</a>
+      </p>
+      <p className={cn(
+          "w-full max-w-xl px-4 transition-all duration-500 ease-out",
+          ( ready ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0" )
+        )}>
         <SmoothScroll
           to="#cvr"
-          className="rounded-sm transition-all border border-transparent -ml-4 px-4 py-3 hover:border-black/30 hover:shadow-xl hover:scale-[1.05]"
+          className="rounded-sm transition-all border border-transparent -ml-4 px-4 py-3 hover:bg-black/30"
         >
           Scroll to see some of my work&nbsp;&nbsp;
           <span className="align-sub">&#10549;</span>

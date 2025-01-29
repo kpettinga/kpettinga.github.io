@@ -3,6 +3,7 @@ import Background from "./Background";
 import { projects } from "./data";
 import Intro from "./Intro";
 import { cn } from "./utilities";
+import SmoothScroll from "./SmoothScroll";
 
 export function App() {
 
@@ -51,7 +52,7 @@ export function App() {
           </div>
           <div
             className="
-            max-w-4xl px-4 md:px-8 grid gap-x-12 md:gap-x-16 gap-y-4 md:gap-y-8 grid-cols-1 lg:grid-cols-12
+            max-w-4xl px-4 md:px-8 grid gap-x-12 md:gap-x-16 gap-y-2 md:gap-y-8 grid-cols-1 lg:grid-cols-12
             transition-all ease-in-out duration-500 delay-500
             opacity-0 group-[.is-visible]/stage:opacity-100
             translate-y-12 group-[.is-visible]/stage:translate-y-0
@@ -63,7 +64,7 @@ export function App() {
                   <strong>Product</strong>
                 </small>
               </div>
-              <h2 className="text-3xl lg:text-4xl font-thin">
+              <h2 className="text-2xl lg:text-4xl font-thin">
                 {project.url ? (
                   <a
                     href={project.url}
@@ -73,7 +74,7 @@ export function App() {
                   >
                     {project.title}
                     <svg
-                      className="absolute left-0 bottom-0 -translate-x-[calc(100%+0.75em)] size-8 opacity-50 ml-4"
+                      className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[calc(100%+0.25em)] size-6 lg:size-8 opacity-50"
                       viewBox="0 0 24 24"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +98,7 @@ export function App() {
                   <strong>Role</strong>
                 </small>
               </div>
-              <h3 className="text-3xl font-thin">{project.role}</h3>
+              <h3 className="text-2xl lg:text-3xl font-thin">{project.role}</h3>
             </div>
             <div className="lg:col-span-8 order-2 lg:order-1">
               <div className="opacity-50 font-mono mb-2">
@@ -142,6 +143,13 @@ export function App() {
           <svg width="64px" height="64px" viewBox="0 -2.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="currentColor"><g transform="translate(-300.000000, -922.000000)" fill="currentColor"><g id="icons" transform="translate(56.000000, 160.000000)"><path d="M262,764.291 L254,771.318 L246,764.281 L246,764 L262,764 L262,764.291 Z M246,775 L246,766.945 L254,773.98 L262,766.953 L262,775 L246,775 Z M244,777 L264,777 L264,762 L244,762 L244,777 Z" id="email-[#1573]" /></g></g></svg>
           <strong><small>Email me</small></strong>
         </a>
+        <SmoothScroll
+          to="#intro"
+          className="rounded-sm transition-all border border-transparent -ml-4 px-4 py-3 hover:border-black/30 hover:shadow-xl hover:scale-[1.05]"
+        >
+          <span className="inline-block rotate-180">&#10549;</span>
+          &nbsp;&nbsp;Back to top
+        </SmoothScroll>
       </Stage>
     </>
   );
