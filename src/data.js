@@ -66,7 +66,7 @@ export const projects = [
     },
     industry: "Transportation",
     stack: ["Wordpress", "AJAX", "Fluid UI", "Modular Content"],
-    role: "Fullstack Engineer",
+    role: "Full Stack Engineer",
     color: "#5E28B2",
   },
   {
@@ -87,7 +87,7 @@ export const projects = [
       "Mapbox",
       "Vue",
     ],
-    role: "Fullstack Engineer",
+    role: "Full Stack Engineer",
     color: "#21b07a",
   },
   {
@@ -104,7 +104,7 @@ export const projects = [
     },
     industry: "Performing Arts",
     stack: ["Wordpress", "Events Calendar", "slick.js"],
-    role: "Fullstack Engineer",
+    role: "Full Stack Engineer",
     color: "#000000",
   },
   // {
@@ -125,7 +125,7 @@ export const projects = [
   //     "Events Calendar",
   //     "Modular Content",
   //   ],
-  //   role: "Fullstack Engineer",
+  //   role: "Full Stack Engineer",
   //   color: "#C48014",
   // },
   // {
