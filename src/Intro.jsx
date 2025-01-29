@@ -21,7 +21,7 @@ export default function Intro() {
           "w-full max-w-xl px-4 transition-all duration-500 ease-out",
           ( ready ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0" )
         )}>
-        I'm Kirk Pettinga, a software engineer, designer, dad and husband, and general nerd. I build software the web, among other things.
+        I'm Kirk Pettinga, a software engineer, designer, dad and husband, and general nerd. I build software for the web, among other things.
       </h2>
       <p className={cn(
           "w-full max-w-xl px-4 transition-all duration-500 ease-out",
